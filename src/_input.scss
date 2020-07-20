@@ -1,0 +1,70 @@
+﻿///<reference path="_variables.scss" />
+///<reference path="_variablesLight.scss" />
+///<reference path="_variablesDark.scss" />
+///<reference path="../node_modules/bootstrap/scss/bootstrap.scss" />
+
+.form-control, .custom-select {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline: none;
+    transition: border-bottom-color 0.3s ease;
+
+    &:focus:not(:read-only) {
+        border-bottom-color: $primary;
+    }
+
+    &:disabled, &:read-only {
+        color: $inputDisabledColor !important;
+    }
+}
+
+.input-group {
+    .form-control {
+        border-right: 1px solid $input-border-color;
+
+        .input-group-append .form-control:last-child {
+            border-left: none;
+        }
+    }
+}
+
+input[type="color"].form-control {
+    padding: .3rem .5rem
+}
+
+input[type="color"]:not(.form-control) {
+    padding: 0;
+    border: none;
+    display: block;
+    height: 1.8rem;
+}
+
+.form-group label:not(.form-check-label):not(.custom-control-label), .twr-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-left: 0.4rem;
+    opacity: 0.7;
+}
+
+optgroup {
+    background: $optgroupBackground;
+}
+
+.form-check-label, .form-check-input,
+.custom-control-label, .custom-control-input {
+    cursor: pointer;
+}
+
+.form-group .custom-file label.custom-file-label {
+    font-size: 1rem !important;
+    text-transform: none;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+}

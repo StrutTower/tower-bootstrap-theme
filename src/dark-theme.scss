@@ -1,0 +1,29 @@
+﻿///<reference path="_variablesDark.scss" />
+///<reference path="../node_modules/bootstrap/scss/bootstrap.scss" />
+
+@import "variables";
+@import "variablesDark";
+
+@import "../node_modules/dark-bootstrap-theme/src/darkVariables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/dark-bootstrap-theme/src/fixes";
+
+@import "input";
+@import "carousel";
+
+.btn.btn-secondary:hover, .btn.btn-secondary:focus {
+    background: darken($secondary,2);
+    border-color: darken($secondary, 2);
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-secondary.dropdown-toggle {
+    background: darken($secondary, 4);
+    border-color: darken($secondary, 4);
+}
+
+.btn.btn-dark:hover, .btn.btn-dark:focus {
+    background: darken($dark,2);
+    border-color: darken($dark, 2);
+}

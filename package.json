@@ -1,0 +1,19 @@
+{
+  "name": "tower-bootstrap-theme",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "author": "StrutTower",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.5.0",
+    "dark-bootstrap-theme": "4.0.3"
+  },
+  "devDependencies": {
+    "gulp": "4.0.2",
+    "gulp-clean-css": "4.3.0",
+    "gulp-sass": "4.1.0",
+    "gulp-concat": "2.6.1",
+    "gulp-rename": "2.0.0"
+  }
+}
