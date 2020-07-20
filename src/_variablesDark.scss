@@ -1,31 +1,31 @@
 ﻿
 
-$gray-800: #2A2A2E;
+$gray-800: #2A2A2E !default;
 
-$gray-900: darken($gray-800, 4);
-$gray-700: lighten($gray-800, 10);
-$gray-600: lighten($gray-700, 10);
-$gray-500: lighten($gray-600, 10);
-$gray-400: lighten($gray-500, 10);
-$gray-300: lighten($gray-400, 10);
-$gray-200: lighten($gray-300, 10);
-$gray-100: lighten($gray-200, 10);
+$gray-900: darken($gray-800, 4) !default;
+$gray-700: lighten($gray-800, 10) !default;
+$gray-600: lighten($gray-700, 10) !default;
+$gray-500: lighten($gray-600, 10) !default;
+$gray-400: lighten($gray-500, 10) !default;
+$gray-300: lighten($gray-400, 10) !default;
+$gray-200: lighten($gray-300, 10) !default;
+$gray-100: lighten($gray-200, 10) !default;
 
-$body-bg: $gray-800;
-$body-color: #F1F1F1;
+$body-bg: $gray-800 !default;
+$body-color: #F1F1F1 !default;
 
-$primary: #007acc;
-$secondary: $gray-700;
-$dark: $gray-900;
+$primary: #007acc !default;
+$secondary: $gray-700 !default;
+$dark: $gray-900 !default;
 
-$input-bg: lighten($body-bg, 3);
-$inputDisabledColor: darken($body-color, 25);
-$input-border-color: lighten($body-bg, 10);
-$optgroupBackground: darken($input-bg, 5);
+$input-bg: lighten($body-bg, 3) !default;
+$inputDisabledColor: darken($body-color, 25) !default;
+$input-border-color: lighten($body-bg, 10) !default;
+$optgroupBackground: darken($input-bg, 5) !default;
 
-$hr-border-color: lighten($body-bg, 10);
+$hr-border-color: lighten($body-bg, 10) !default;
 
-$custom-select-focus-border-color: $primary;
-$custom-select-focus-box-shadow: none;
+$custom-select-focus-border-color: $primary !default;
+$custom-select-focus-box-shadow: none !default;
 
-$custom-control-indicator-disabled-bg: lighten($body-bg, 10);
+$custom-control-indicator-disabled-bg: lighten($body-bg, 10) !default;
