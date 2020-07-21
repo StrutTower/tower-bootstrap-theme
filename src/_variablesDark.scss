@@ -21,7 +21,7 @@ $dark: $gray-900 !default;
 $input-bg: lighten($body-bg, 3) !default;
 $inputDisabledColor: darken($body-color, 25) !default;
 $input-border-color: lighten($body-bg, 10) !default;
-$optgroupBackground: darken($input-bg, 5) !default;
+$optgroup-background: darken($input-bg, 5) !default;
 
 $hr-border-color: lighten($body-bg, 10) !default;
 
@@ -29,3 +29,5 @@ $custom-select-focus-border-color: $primary !default;
 $custom-select-focus-box-shadow: none !default;
 
 $custom-control-indicator-disabled-bg: lighten($body-bg, 10) !default;
+
+$webkit-picker-indicator-filter: 70%;

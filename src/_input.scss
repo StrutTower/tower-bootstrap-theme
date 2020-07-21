@@ -53,7 +53,7 @@ input[type="color"]:not(.form-control) {
 }
 
 optgroup {
-    background: $optgroupBackground;
+    background: $optgroup-background;
 }
 
 .form-check-label, .form-check-input,
@@ -67,4 +67,16 @@ optgroup {
     border-top:none;
     border-left:none;
     border-right:none;
+}
+
+// Hide the default select arrow
+.custom-select {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(70%);
 }

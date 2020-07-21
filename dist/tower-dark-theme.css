@@ -7235,8 +7235,46 @@ optgroup {
   border-left: none;
   border-right: none; }
 
+.custom-select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none; }
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(70%); }
+
 .carousel-caption {
   text-shadow: 2px 2px 5px black; }
+
+.text-faded {
+  opacity: 0.7; }
+
+.font-weight-semibold {
+  font-weight: 600; }
+
+.dropdown-menu.show {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); }
+
+.field-validation-error, .validation-summary-errors {
+  color: #dc3b36; }
+
+.form-control.input-validation-error {
+  border-color: #dc3b36; }
+
+fieldset {
+  border: 1px solid #424249;
+  padding-top: 0.4rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-bottom: 0.8rem; }
+  fieldset legend {
+    width: auto;
+    margin-left: .5rem;
+    font-size: 1rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    margin-bottom: 0; }
 
 .btn.btn-secondary:hover, .btn.btn-secondary:focus {
   background: #3d3d43;

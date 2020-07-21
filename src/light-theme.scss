@@ -6,15 +6,9 @@
 
 @import "input";
 @import "carousel";
+@import "other";
 
 .btn.btn-outline-light {
     color:#aaa;
     border-color:#ccc;
-}
-
-.custom-select {
-    /* for Firefox */
-    -moz-appearance: none;
-    /* for Chrome */
-    -webkit-appearance: none;
 }

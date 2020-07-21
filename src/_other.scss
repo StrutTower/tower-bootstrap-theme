@@ -1,0 +1,45 @@
+﻿///<reference path="_variablesDark.scss" />
+///<reference path="../node_modules/bootstrap/scss/bootstrap.scss" />
+
+// Similar to text-muted but using opacity
+.text-faded {
+    opacity: 0.7;
+}
+
+// Adds a semibold option
+.font-weight-semibold {
+    font-weight: 600;
+}
+
+// Adds a shadow to dropdown menus
+.dropdown-menu.show {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+// ASP.NET validation error messages
+.field-validation-error, .validation-summary-errors {
+    color: $danger;
+}
+
+// jQuery validation input validation error
+.form-control.input-validation-error {
+    border-color: $danger;
+}
+
+// Revert fieldsets to more default styling
+fieldset {
+    border: 1px solid $input-border-color;
+    padding-top: 0.4rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-bottom: 0.8rem;
+
+    legend {
+        width: auto;
+        margin-left: .5rem;
+        font-size: 1rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+        margin-bottom: 0;
+    }
+}
