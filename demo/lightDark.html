@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Tower Bootstrap Theme</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="themeSwitcher.js" type="text/javascript"></script>
+<link href="../dist/tower-dark-theme.min.css" rel="stylesheet" media="(prefers-color-scheme:dark)" id="default-theme" />
+<link href="../dist/tower-light-theme.min.css" rel="stylesheet" media="(prefers-color-scheme:light)" />
+<link href="../dist/tower-light-theme.min.css" rel="stylesheet" media="print" />
+<script>
+    // Check if the browser doesn't support prefers-color-scheme
+    if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+        // Hide the page content until the CSS loads
+        document.documentElement.style.display = 'none';
+
+        // Get the href of the default theme
+        var cssHref = document.getElementById('default-theme').getAttribute('href');
+
+        // Add a new stylesheet link without a media attribute
+        document.head.insertAdjacentHTML(
+            'beforeend',
+            '<link href="' + cssHref + '" rel="stylesheet" id="fallback-theme" />'
+        );
+
+        // Once the fallback stylesheet is loaded show the page content
+        document.getElementById('fallback-theme').addEventListener('load', function (e) {
+            document.documentElement.style.display = '';
+        });
+    }
+</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Tower Bootstrap Theme</a>
+        </div>
+    </nav>
+
+    <main class="container pt-2">
+        <h3>Light/Dark Theme Switching</h3>
+        <hr />
+        <p>
+            <a href="index.html" class="btn btn-link">&#8592; Return to Index</a>
+        </p>
+
+        <p>
+            This examples uses the <code>prefers-color-scheme</code> media query to switch between light and dark themes automatically.
+            The theme can be switched by changing your system theme if your browser supports it.
+        </p>
+
+        <h5>Example HTML</h5>
+
+        <pre><code>&lt;link href=&quot;../dist/tower-dark-theme.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;(prefers-color-scheme:dark)&quot; id=&quot;default-theme&quot; /&gt;
+&lt;link href=&quot;../dist/tower-light-theme.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;(prefers-color-scheme:light)&quot; /&gt;
+&lt;link href=&quot;../dist/tower-light-theme.min.css&quot; rel=&quot;stylesheet&quot; media=&quot;print&quot; /&gt;
+&lt;script&gt;
+        <span class="text-success">// Check if the browser doesn&#39;t support prefers-color-scheme</span>
+    if (window.matchMedia(&#39;(prefers-color-scheme: dark)&#39;).media === &#39;not all&#39;) {
+        <span class="text-success">// Hide the page content until the CSS loads</span>
+        document.documentElement.style.display = &#39;none&#39;;
+
+        <span class="text-success">// Get the href of the default theme</span>
+        var cssHref = document.getElementById(&#39;default-theme&#39;).getAttribute(&#39;href&#39;);
+
+        <span class="text-success">// Add a new stylesheet link without a media attribute</span>
+        document.head.insertAdjacentHTML(
+            &#39;beforeend&#39;,
+            &#39;&lt;link href=&quot;&#39; + cssHref + &#39;&quot; rel=&quot;stylesheet&quot; id=&quot;fallback-theme&quot; /&gt;&#39;
+        );
+
+        <span class="text-success">// Once the fallback stylesheet is loaded show the page content</span>
+        document.getElementById(&#39;fallback-theme&#39;).addEventListener(&#39;load&#39;, function (e) {
+            document.documentElement.style.display = &#39;&#39;;
+        });
+    }
+&lt;/script&gt;
+</code></pre>
+
+
+        <h5>Compatibility</h5>
+
+        <p>
+            <a href="https://caniuse.com/#feat=prefers-color-scheme" target="_blank" rel="noreferrer noopener">
+                <picture>
+                    <source type="image/webp" srcset="https://caniuse.bitsofco.de/static/v1/prefers-color-scheme-1595384049800.webp">
+                    <source type="image/png" srcset="https://caniuse.bitsofco.de/static/v1/prefers-color-scheme-1595384049800.png">
+                    <img src="https://caniuse.bitsofco.de/static/v1/prefers-color-scheme-1595384049800.jpg" alt="Data on support for the prefers-color-scheme feature across the major browsers from caniuse.com">
+                </picture>
+            </a>
+        </p>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
