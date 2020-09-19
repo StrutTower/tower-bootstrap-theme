@@ -1655,18 +1655,18 @@ textarea.form-control {
 .is-invalid ~ .invalid-tooltip {
   display: block; }
 
-.was-validated .form-control:invalid, .form-control.is-invalid {
+.was-validated .form-control:invalid, .form-control.is-invalid, .form-control.input-validation-error {
   border-color: #dc3b36;
   padding-right: calc(1.5em + 0.25rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3b36' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3b36' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right calc(0.375em + 0.0625rem) center;
   background-size: calc(0.75em + 0.125rem) calc(0.75em + 0.125rem); }
-  .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
+  .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus, .form-control.input-validation-error:focus {
     border-color: #dc3b36;
     box-shadow: 0 0 0 0.2rem rgba(220, 59, 54, 0.25); }
 
-.was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
+.was-validated textarea.form-control:invalid, textarea.form-control.is-invalid, textarea.form-control.input-validation-error {
   padding-right: calc(1.5em + 0.25rem);
   background-position: top calc(0.375em + 0.0625rem) right calc(0.375em + 0.0625rem); }
 
@@ -7205,6 +7205,13 @@ select::-ms-expand {
   .input-group .form-control .input-group-append .form-control:last-child {
     border-left: none; }
 
+.form-control.input-validation-error:focus:not(:read-only) {
+  border-bottom-color: #dc3b36;
+  box-shadow: none; }
+
+.field-validation-error, .validation-summary-errors {
+  color: #dc3b36; }
+
 input[type="color"].form-control {
   padding: .3rem .5rem; }
 
@@ -7235,6 +7242,15 @@ optgroup {
   border-left: none;
   border-right: none; }
 
+.form-help-text {
+  opacity: 0.7;
+  padding-left: 10px;
+  font-size: 0.8rem; }
+
+.form-check ~ .form-help-text {
+  transform: translateY(-7px);
+  padding-left: 25px; }
+
 .custom-select {
   /* for Firefox */
   -moz-appearance: none;
@@ -7252,6 +7268,16 @@ optgroup {
 
 .font-weight-semibold {
   font-weight: 600; }
+
+.display-5 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  line-height: 1.3; }
+
+.display-6 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1.4; }
 
 .dropdown-menu.show {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); }
@@ -7289,3 +7315,6 @@ fieldset {
 .btn.btn-dark:hover, .btn.btn-dark:focus {
   background: #1b1b1e;
   border-color: #1b1b1e; }
+
+.font-weight-semibold, .font-weight-bold, strong {
+  color: #fff; }

@@ -28,3 +28,8 @@
     background: darken($dark,2);
     border-color: darken($dark, 2);
 }
+
+// Set bold font to white to help it stand out more like it does in the light theme
+.font-weight-semibold, .font-weight-bold, strong {
+    color: #fff;
+}
