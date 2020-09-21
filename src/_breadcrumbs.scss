@@ -1,0 +1,72 @@
+﻿///<reference path="../node_modules/bootstrap/scss/bootstrap.scss" />
+
+$breadcrumb-link-line-height: 2;
+$breadcrumb-link-padding: 0 20px;
+
+.breadcrumb {
+    padding-left: 0;
+    padding-right: 0;
+
+    .breadcrumb-item {
+        display: inline-block;
+        position: relative;
+        margin-left: 0.2rem;
+
+        &:before, &:after {
+            left: 0;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            background: $secondary;
+            z-index: -1;
+            transition: background 0.3s ease;
+        }
+
+        &:before {
+            top: 0;
+            transform: skew(20deg);
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+        }
+
+        &:after {
+            bottom: 0;
+            transform: skew(-20deg);
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+
+        &:hover {
+            &:before, &:after {
+                background: $info;
+            }
+        }
+
+        &.active {
+            display: inline-block;
+            position: relative;
+            line-height: $breadcrumb-link-line-height;
+            padding: $breadcrumb-link-padding;
+            color: lighten($secondary,40);
+
+            &:before, &:after {
+                background: lighten($secondary,5);
+            }
+        }
+
+        a {
+            color: $body-color;
+            display: inline-block;
+            position: relative;
+            line-height: $breadcrumb-link-line-height;
+            padding: $breadcrumb-link-padding;
+            color: #fff;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

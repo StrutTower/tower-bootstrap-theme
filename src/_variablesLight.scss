@@ -4,13 +4,13 @@ $primary: #007bff !default;
 $light: darken($body-bg, 20) !default;
 
 $input-bg: darken($body-bg, 5) !default;
-$inputDisabledColor: lighten($body-color, 20) !default;
 $input-border-color: darken($body-bg, 15) !default;
 $optgroup-background: darken($input-bg,5) !default;
 
+$label-opacity: 0.8 !default;
 
 $custom-select-focus-border-color: $primary !default;
 $custom-select-focus-box-shadow: none !default;
 
 
-$webkit-picker-indicator-filter: 35%;
+$webkit-picker-indicator-filter: 35% !default;

@@ -17,10 +17,6 @@
     &:focus:not(:read-only) {
         border-bottom-color: $primary;
     }
-
-    &:disabled, &:read-only {
-        color: $inputDisabledColor !important;
-    }
 }
 
 .input-group {
@@ -57,12 +53,12 @@ input[type="color"]:not(.form-control) {
     height: 1.8rem;
 }
 
-.form-group label:not(.form-check-label):not(.custom-control-label), .twr-label {
+.form-group label:not(.form-check-label):not(.custom-control-label) {
     font-size: 0.7rem;
     text-transform: uppercase;
     margin-bottom: 0;
     margin-left: 0.4rem;
-    opacity: 0.7;
+    opacity: $label-opacity;
 }
 
 optgroup {
