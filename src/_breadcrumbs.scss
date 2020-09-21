@@ -28,7 +28,7 @@ $breadcrumb-link-current-bg: lighten($secondary, 5);
         }
 
         &:first-child {
-            a, span {
+            a, & > span {
                 padding-left: 15px;
                 @include border-radius(4px 0 0 4px);
 

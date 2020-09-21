@@ -7255,10 +7255,10 @@ optgroup {
       text-align: center;
       margin-right: 4px;
       transition: background 0.2s ease; }
-    .breadcrumb .breadcrumb-item:first-child a, .breadcrumb .breadcrumb-item:first-child span {
+    .breadcrumb .breadcrumb-item:first-child a, .breadcrumb .breadcrumb-item:first-child > span {
       padding-left: 15px;
       border-radius: 4px 0 0 4px; }
-      .breadcrumb .breadcrumb-item:first-child a:before, .breadcrumb .breadcrumb-item:first-child span:before {
+      .breadcrumb .breadcrumb-item:first-child a:before, .breadcrumb .breadcrumb-item:first-child > span:before {
         border: none; }
     .breadcrumb .breadcrumb-item:last-child a, .breadcrumb .breadcrumb-item:last-child > span {
       padding-right: 15px;
