@@ -11,9 +11,9 @@ $breadcrumb-link-current-bg: lighten($secondary, 5);
 
     .breadcrumb-item {
         float: left;
-        padding-left: .56rem;
+        padding-left: 12px;
 
-        a, span {
+        a, & > span {
             color: #FFF;
             display: block;
             background: $breadcrumb-link-bg;
@@ -23,7 +23,7 @@ $breadcrumb-link-current-bg: lighten($secondary, 5);
             line-height: 40px;
             padding: 0 10px 0 5px;
             text-align: center;
-            margin-right: .3rem;
+            margin-right: 4px;
             transition: background 0.2s ease;
         }
 
@@ -39,7 +39,7 @@ $breadcrumb-link-current-bg: lighten($secondary, 5);
         }
 
         &:last-child {
-            a, span {
+            a, & > span {
                 padding-right: 15px;
                 @include border-radius(0 4px 4px 0);
 
@@ -49,7 +49,7 @@ $breadcrumb-link-current-bg: lighten($secondary, 5);
             }
         }
 
-        a, span {
+        a, & > span {
             &:before,
             &:after {
                 content: "";
@@ -102,7 +102,7 @@ $breadcrumb-link-current-bg: lighten($secondary, 5);
             }
         }
 
-        &.active span {
+        &.active > span {
             background: $breadcrumb-link-current-bg;
 
             &:before {

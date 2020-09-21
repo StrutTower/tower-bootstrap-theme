@@ -7242,8 +7242,8 @@ optgroup {
   display: inline-block; }
   .breadcrumb .breadcrumb-item {
     float: left;
-    padding-left: .56rem; }
-    .breadcrumb .breadcrumb-item a, .breadcrumb .breadcrumb-item span {
+    padding-left: 12px; }
+    .breadcrumb .breadcrumb-item a, .breadcrumb .breadcrumb-item > span {
       color: #FFF;
       display: block;
       background: #6c757d;
@@ -7253,19 +7253,19 @@ optgroup {
       line-height: 40px;
       padding: 0 10px 0 5px;
       text-align: center;
-      margin-right: .3rem;
+      margin-right: 4px;
       transition: background 0.2s ease; }
     .breadcrumb .breadcrumb-item:first-child a, .breadcrumb .breadcrumb-item:first-child span {
       padding-left: 15px;
       border-radius: 4px 0 0 4px; }
       .breadcrumb .breadcrumb-item:first-child a:before, .breadcrumb .breadcrumb-item:first-child span:before {
         border: none; }
-    .breadcrumb .breadcrumb-item:last-child a, .breadcrumb .breadcrumb-item:last-child span {
+    .breadcrumb .breadcrumb-item:last-child a, .breadcrumb .breadcrumb-item:last-child > span {
       padding-right: 15px;
       border-radius: 0 4px 4px 0; }
-      .breadcrumb .breadcrumb-item:last-child a:after, .breadcrumb .breadcrumb-item:last-child span:after {
+      .breadcrumb .breadcrumb-item:last-child a:after, .breadcrumb .breadcrumb-item:last-child > span:after {
         border: none; }
-    .breadcrumb .breadcrumb-item a:before, .breadcrumb .breadcrumb-item a:after, .breadcrumb .breadcrumb-item span:before, .breadcrumb .breadcrumb-item span:after {
+    .breadcrumb .breadcrumb-item a:before, .breadcrumb .breadcrumb-item a:after, .breadcrumb .breadcrumb-item > span:before, .breadcrumb .breadcrumb-item > span:after {
       content: "";
       position: absolute;
       top: 0;
@@ -7274,10 +7274,10 @@ optgroup {
       border-width: 20px 10px;
       width: 0;
       height: 0; }
-    .breadcrumb .breadcrumb-item a:before, .breadcrumb .breadcrumb-item span:before {
+    .breadcrumb .breadcrumb-item a:before, .breadcrumb .breadcrumb-item > span:before {
       left: -20px;
       border-left-color: transparent; }
-    .breadcrumb .breadcrumb-item a:after, .breadcrumb .breadcrumb-item span:after {
+    .breadcrumb .breadcrumb-item a:after, .breadcrumb .breadcrumb-item > span:after {
       left: 100%;
       border-color: transparent;
       border-left-color: #6c757d; }
@@ -7295,9 +7295,9 @@ optgroup {
         border-left-color: transparent; }
       .breadcrumb .breadcrumb-item a:active:after {
         border-left-color: #1a88ff; }
-    .breadcrumb .breadcrumb-item.active span {
+    .breadcrumb .breadcrumb-item.active > span {
       background: #78828a; }
-      .breadcrumb .breadcrumb-item.active span:before {
+      .breadcrumb .breadcrumb-item.active > span:before {
         border-color: #78828a;
         border-left-color: transparent; }
 
