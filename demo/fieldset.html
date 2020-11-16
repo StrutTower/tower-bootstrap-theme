@@ -17,38 +17,45 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container pt-2">
         <button type="button" class="btn btn-secondary" id="theme-switcher" style="position:fixed;top:50px; right:5px;">Switch Themes</button>
-        <h1 class="display-4">Tower Bootstrap Theme</h1>
 
-        <div>
-            <a href="buttons.html" class="btn btn-link">Buttons and Dropdowns</a>
-        </div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Index</a></li>
+            <li class="breadcrumb-item active"><span>Fieldsets</span></li>
+        </ol>
 
-        <div>
-            <a href="forms.html" class="btn btn-link">Forms</a>
-        </div>
-
-        <div>
-            <a href="typography.html" class="btn btn-link">Typography</a>
-        </div>
-
-        <div>
-            <a href="tables.html" class="btn btn-link">Tables</a>
-        </div>
-
-        <div>
-            <a href="carousel.html" class="btn btn-link">Carousel</a>
-        </div>
-
-        <div>
-            <a href="fieldset.html" class="btn btn-link">Fieldset</a>
-        </div>
-
+        <h3>Fieldsets</h3>
         <hr />
 
         <div>
-            <a href="lightDark.html" class="btn btn-link">Light/Dark Theme Switching Using prefers-color-scheme</a>
+            <p>Fieldsets are reverted back to the standard HTML styling</p>
+            <fieldset class="mb-4">
+                <legend>Fieldset Legend</legend>
+                Fieldset Content
+            </fieldset>
+
+            <h4>In class="row"</h4>
+            <div class="row">
+                <div class="col-md-4">
+                    <fieldset>
+                        <legend>Fieldset Legend</legend>
+                        Fieldset Content
+                    </fieldset>
+                </div>
+                <div class="col-md-4">
+                    <fieldset>
+                        <legend>Fieldset Legend</legend>
+                        Fieldset Content
+                    </fieldset>
+                </div>
+                <div class="col-md-4">
+                    <fieldset>
+                        <legend>Fieldset Legend</legend>
+                        Fieldset Content
+                    </fieldset>
+                </div>
+            </div>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,6 +1,10 @@
 ﻿///<reference path="_variablesDark.scss" />
 ///<reference path="../node_modules/bootstrap/scss/bootstrap.scss" />
 
+html {
+    font-size:14px;
+}
+
 @import "variables";
 @import "variablesDark";
 

@@ -1,3 +1,6 @@
+html {
+  font-size: 14px; }
+
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -7226,7 +7229,10 @@ input[type="color"]:not(.form-control) {
   margin-left: 0.4rem;
   opacity: 0.7; }
 
-optgroup {
+select option {
+  background: #313136; }
+
+select optgroup {
   background: #252529; }
 
 .form-check-label, .form-check-input,
@@ -7273,8 +7279,8 @@ optgroup {
       background: #424249;
       text-decoration: none;
       position: relative;
-      height: 40px;
-      line-height: 40px;
+      height: 35px;
+      line-height: 35px;
       padding: 0 10px 0 5px;
       text-align: center;
       margin-right: 4px;
@@ -7295,7 +7301,7 @@ optgroup {
       top: 0;
       border: 0 solid #424249;
       transition: border-color 0.2s ease;
-      border-width: 20px 10px;
+      border-width: 17.5px 10px;
       width: 0;
       height: 0; }
     .breadcrumb .breadcrumb-item a:before, .breadcrumb .breadcrumb-item > span:before {
@@ -7361,7 +7367,7 @@ fieldset {
   padding-bottom: 0.8rem; }
   fieldset legend {
     width: auto;
-    margin-left: .5rem;
+    margin-left: .3rem;
     font-size: 1rem;
     padding-left: 0.3rem;
     padding-right: 0.3rem;

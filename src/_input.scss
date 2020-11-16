@@ -34,7 +34,7 @@
 
     &:focus:not(:read-only) {
         border-bottom-color: $danger;
-        box-shadow:none;
+        box-shadow: none;
     }
 }
 
@@ -61,8 +61,14 @@ input[type="color"]:not(.form-control) {
     opacity: $label-opacity;
 }
 
-optgroup {
-    background: $optgroup-background;
+select {
+    option {
+        background: $input-bg;
+    }
+
+    optgroup {
+        background: $optgroup-background;
+    }
 }
 
 .form-check-label, .form-check-input,
@@ -73,9 +79,9 @@ optgroup {
 .form-group .custom-file label.custom-file-label {
     font-size: 1rem !important;
     text-transform: none;
-    border-top:none;
-    border-left:none;
-    border-right:none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
 .form-help-text {

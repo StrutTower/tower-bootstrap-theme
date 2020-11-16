@@ -1,9 +1,11 @@
-﻿///<reference path="../node_modules/bootstrap/scss/bootstrap.scss" />
+﻿///<reference path="../node_modules/bootstrap/scss/_variables.scss" />
+///<reference path="../node_modules/bootstrap/scss/_mixins.scss" />
+///<reference path="_variables.scss" />
 
-$breadcrumb-link-bg: $secondary;
-$breadcrumb-link-hover-bg: $primary;
-$breadcrumb-link-active-bg: lighten($primary, 5);
-$breadcrumb-link-current-bg: lighten($secondary, 5);
+$breadcrumb-link-bg: $secondary !default;
+$breadcrumb-link-hover-bg: $primary !default;
+$breadcrumb-link-active-bg: lighten($primary, 5) !default;
+$breadcrumb-link-current-bg: lighten($secondary, 5) !default;
 
 .breadcrumb {
     list-style: none;
@@ -19,8 +21,8 @@ $breadcrumb-link-current-bg: lighten($secondary, 5);
             background: $breadcrumb-link-bg;
             text-decoration: none;
             position: relative;
-            height: 40px;
-            line-height: 40px;
+            height: $breadcrumb-height;
+            line-height: $breadcrumb-height;
             padding: 0 10px 0 5px;
             text-align: center;
             margin-right: 4px;
@@ -57,7 +59,7 @@ $breadcrumb-link-current-bg: lighten($secondary, 5);
                 top: 0;
                 border: 0 solid $breadcrumb-link-bg;
                 transition: border-color 0.2s ease;
-                border-width: 20px 10px;
+                border-width: $breadcrumb-height/2 10px;
                 width: 0;
                 height: 0;
             }
