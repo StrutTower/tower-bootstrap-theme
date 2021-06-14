@@ -2,115 +2,115 @@
 ///<reference path="../node_modules/bootstrap/scss/_mixins.scss" />
 ///<reference path="_variables.scss" />
 
-$breadcrumb-link-bg: $secondary !default;
-$breadcrumb-link-hover-bg: $primary !default;
-$breadcrumb-link-active-bg: lighten($primary, 5) !default;
-$breadcrumb-link-current-bg: lighten($secondary, 5) !default;
+//$breadcrumb-link-bg: $secondary !default;
+//$breadcrumb-link-hover-bg: $primary !default;
+//$breadcrumb-link-active-bg: lighten($primary, 5) !default;
+//$breadcrumb-link-current-bg: lighten($secondary, 5) !default;
 
-.breadcrumb {
-    list-style: none;
-    display: inline-block;
+//.breadcrumb {
+//    list-style: none;
+//    display: inline-block;
 
-    .breadcrumb-item {
-        float: left;
-        padding-left: 12px;
+//    .breadcrumb-item {
+//        float: left;
+//        padding-left: 12px;
 
-        a, & > span {
-            color: #FFF;
-            display: block;
-            background: $breadcrumb-link-bg;
-            text-decoration: none;
-            position: relative;
-            height: $breadcrumb-height;
-            line-height: $breadcrumb-height;
-            padding: 0 10px 0 5px;
-            text-align: center;
-            margin-right: 4px;
-            transition: background 0.2s ease;
-        }
+//        a, & > span {
+//            color: #FFF;
+//            display: block;
+//            background: $breadcrumb-link-bg;
+//            text-decoration: none;
+//            position: relative;
+//            height: $breadcrumb-height;
+//            line-height: $breadcrumb-height;
+//            padding: 0 10px 0 5px;
+//            text-align: center;
+//            margin-right: 4px;
+//            transition: background 0.2s ease;
+//        }
 
-        &:first-child {
-            a, & > span {
-                padding-left: 15px;
-                @include border-radius(4px 0 0 4px);
+//        &:first-child {
+//            a, & > span {
+//                padding-left: 15px;
+//                @include border-radius(4px 0 0 4px);
 
-                &:before {
-                    border: none;
-                }
-            }
-        }
+//                &:before {
+//                    border: none;
+//                }
+//            }
+//        }
 
-        &:last-child {
-            a, & > span {
-                padding-right: 15px;
-                @include border-radius(0 4px 4px 0);
+//        &:last-child {
+//            a, & > span {
+//                padding-right: 15px;
+//                @include border-radius(0 4px 4px 0);
 
-                &:after {
-                    border: none;
-                }
-            }
-        }
+//                &:after {
+//                    border: none;
+//                }
+//            }
+//        }
 
-        a, & > span {
-            &:before,
-            &:after {
-                content: "";
-                position: absolute;
-                top: 0;
-                border: 0 solid $breadcrumb-link-bg;
-                transition: border-color 0.2s ease;
-                border-width: $breadcrumb-height/2 10px;
-                width: 0;
-                height: 0;
-            }
+//        a, & > span {
+//            &:before,
+//            &:after {
+//                content: "";
+//                position: absolute;
+//                top: 0;
+//                border: 0 solid $breadcrumb-link-bg;
+//                transition: border-color 0.2s ease;
+//                border-width: $breadcrumb-height/2 10px;
+//                width: 0;
+//                height: 0;
+//            }
 
-            &:before {
-                left: -20px;
-                border-left-color: transparent;
-            }
+//            &:before {
+//                left: -20px;
+//                border-left-color: transparent;
+//            }
 
-            &:after {
-                left: 100%;
-                border-color: transparent;
-                border-left-color: $breadcrumb-link-bg;
-            }
-        }
+//            &:after {
+//                left: 100%;
+//                border-color: transparent;
+//                border-left-color: $breadcrumb-link-bg;
+//            }
+//        }
 
-        a {
-            &:hover {
-                background-color: $breadcrumb-link-hover-bg;
+//        a {
+//            &:hover {
+//                background-color: $breadcrumb-link-hover-bg;
 
-                &:before {
-                    border-color: $breadcrumb-link-hover-bg;
-                    border-left-color: transparent;
-                }
+//                &:before {
+//                    border-color: $breadcrumb-link-hover-bg;
+//                    border-left-color: transparent;
+//                }
 
-                &:after {
-                    border-left-color: $breadcrumb-link-hover-bg;
-                }
-            }
+//                &:after {
+//                    border-left-color: $breadcrumb-link-hover-bg;
+//                }
+//            }
 
-            &:active {
-                background-color: $breadcrumb-link-active-bg;
+//            &:active {
+//                background-color: $breadcrumb-link-active-bg;
 
-                &:before {
-                    border-color: $breadcrumb-link-active-bg;
-                    border-left-color: transparent;
-                }
+//                &:before {
+//                    border-color: $breadcrumb-link-active-bg;
+//                    border-left-color: transparent;
+//                }
 
-                &:after {
-                    border-left-color: $breadcrumb-link-active-bg;
-                }
-            }
-        }
+//                &:after {
+//                    border-left-color: $breadcrumb-link-active-bg;
+//                }
+//            }
+//        }
 
-        &.active > span {
-            background: $breadcrumb-link-current-bg;
+//        &.active > span {
+//            background: $breadcrumb-link-current-bg;
 
-            &:before {
-                border-color: $breadcrumb-link-current-bg;
-                border-left-color: transparent;
-            }
-        }
-    }
-}
+//            &:before {
+//                border-color: $breadcrumb-link-current-bg;
+//                border-left-color: transparent;
+//            }
+//        }
+//    }
+//}

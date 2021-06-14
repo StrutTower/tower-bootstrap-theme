@@ -30,7 +30,7 @@
 }
 
 .form-control.input-validation-error {
-    @extend .form-control.is-invalid;
+   // @extend .form-control.is-invalid;
 
     &:focus:not(:read-only) {
         border-bottom-color: $danger;
@@ -53,7 +53,7 @@ input[type="color"]:not(.form-control) {
     height: 1.8rem;
 }
 
-.form-group label:not(.form-check-label):not(.custom-control-label) {
+.form-group label:not(.form-check-label):not(.form-check):not(.form-check-inline):not(.custom-control-label) {
     font-size: 0.7rem;
     text-transform: uppercase;
     margin-bottom: 0;
@@ -72,8 +72,11 @@ select {
 }
 
 .form-check-label, .form-check-input,
-.custom-control-label, .custom-control-input {
+.custom-control-label, .custom-control-input,
+label.form-check, label.form-check-inline {
     cursor: pointer;
+    display:inline-block;
+    margin-bottom:0;
 }
 
 .form-group .custom-file label.custom-file-label {

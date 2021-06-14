@@ -1,6 +1,6 @@
 ﻿/// <binding ProjectOpened='watch-sass' />
 var gulp = require('gulp')
-    sass = require('gulp-sass')
+    sass = require('gulp-dart-sass')
     cleancss = require('gulp-clean-css')
     concat = require('gulp-concat')
     rename = require('gulp-rename');
