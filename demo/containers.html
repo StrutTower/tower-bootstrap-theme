@@ -4,7 +4,8 @@
     <title>Containers | Tower Bootstrap Theme</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../dist/tower-dark-theme.min.css" rel="stylesheet" />
+    <link href="../dist/tower-dark-theme.min.css" rel="stylesheet" id="dark-stylesheet" />
+    <link href="../dist/tower-light-theme.min.css" rel="stylesheet" id="light-stylesheet" disabled />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
     <link type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet" />
@@ -24,6 +25,8 @@
     </nav>
 
     <main class="container">
+        <button type="button" class="btn btn-secondary float-end" id="theme-switch">Change Themes</button>
+
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
             <li class="breadcrumb-item active">Containers</li>
@@ -133,7 +136,7 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
-                <div class="card text-dark bg-info mb-3" style="max-width: 20rem;">
+                <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
                     <div class="card-header">Header</div>
                     <div class="card-body">
                         <h4 class="card-title">Info card title</h4>
@@ -268,6 +271,10 @@
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
+
+        <br />
+        <br />
+        <br />
     </main>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -4,7 +4,8 @@
     <title>Forms | Tower Bootstrap Theme</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../dist/tower-dark-theme.min.css" rel="stylesheet" />
+    <link href="../dist/tower-dark-theme.min.css" rel="stylesheet" id="dark-stylesheet" />
+    <link href="../dist/tower-light-theme.min.css" rel="stylesheet" id="light-stylesheet" disabled />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
     <link type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet" />
@@ -24,6 +25,8 @@
     </nav>
 
     <main class="container">
+        <button type="button" class="btn btn-secondary float-end" id="theme-switch">Change Themes</button>
+
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
             <li class="breadcrumb-item active">Forms</li>
@@ -33,7 +36,7 @@
         <h2 class="display-4">Forms</h2>
         <hr />
         <div class="row">
-            <div class="col-12 col-sm-7">
+            <div class="col-12 col-sm-7 mb-3">
                 <form>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
@@ -140,7 +143,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 mb-3">
                 <fieldset class="form-group mb-3">
                     <legend>Radio buttons</legend>
                     <div class="form-check">
@@ -178,8 +181,8 @@
                     </div>
                 </fieldset>
             </div>
-            <div class="col-12 col-sm-6">
-                <fieldset class="form-group mb-3">
+            <div class="col-12 col-sm-6 mb-3">
+                <fieldset class="form-group">
                     <legend>Custom Radio buttons</legend>
                     <div class="form-check">
                         <input type="radio" id="customRadio1" name="customRadio" class="form-check-input">
@@ -211,7 +214,7 @@
                 </fieldset>
             </div>
 
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 mb-3">
                 <fieldset>
                     <legend>Custom Switches</legend>
                     <div class="form-check form-switch">
@@ -224,7 +227,7 @@
                     </div>
                 </fieldset>
             </div>
-            <div class="col-12 col-sm-6">
+            <!--<div class="col-12 col-sm-6">
                 <fieldset>
                     <legend>Custom Select Lists</legend>
                     <select class="form-select">
@@ -242,15 +245,15 @@
                         <option value="3">Three</option>
                     </select>
                 </fieldset>
-            </div>
-            <div class="col-12 col-sm-6">
+            </div>-->
+            <div class="col-12 col-sm-6 mb-3">
                 <fieldset>
                     <legend>Color Picker</legend>
                     <label for="exampleColorInput" class="form-label">Color picker</label>
                     <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
                 </fieldset>
             </div>
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 mb-3">
                 <fieldset>
                     <legend>Custom Range</legend>
                     <label for="customRange1">Example range</label>
@@ -261,7 +264,7 @@
                 </fieldset>
             </div>
 
-            <div class="col-12 col-sm-6">
+            <div class="col-12 col-sm-6 mb-3">
                 <fieldset>
                     <legend>Floating Labels</legend>
                     <div class="form-floating mb-3">

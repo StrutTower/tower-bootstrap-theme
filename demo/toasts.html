@@ -4,7 +4,8 @@
     <title>Toasts | Tower Bootstrap Theme</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../dist/tower-dark-theme.min.css" rel="stylesheet" />
+    <link href="../dist/tower-dark-theme.min.css" rel="stylesheet" id="dark-stylesheet" />
+    <link href="../dist/tower-light-theme.min.css" rel="stylesheet" id="light-stylesheet" disabled />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
     <link type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet" />
@@ -24,28 +25,60 @@
     </nav>
 
     <main class="container">
+        <button type="button" class="btn btn-secondary float-end" id="theme-switch">Change Themes</button>
+
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
             <li class="breadcrumb-item active">Toasts</li>
         </ol>
 
-        <div class="mb-4">
-            <h2 class="display-4">Toasts</h2>
-            <hr />
+        <h2 class="display-4">Toasts</h2>
+        <hr />
 
-            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
-                <div class="toast-header">
-                    <img src="..." class="rounded mr-2" alt="...">
-                    <strong class="me-auto">Bootstrap</strong>
-                    <small>11 mins ago</small>
-                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="toast-container">
+                    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+                        <div class="toast-header">
+                            <strong class="me-auto">Default Toast</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            Hello, world! This is a toast message.
+                        </div>
+                    </div>
+                    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+                        <div class="toast-header bg-primary text-white">
+                            <strong class="me-auto">Primary Header Toast</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            Hello, world! This is a toast message.
+                        </div>
+                    </div>
                 </div>
-                <div class="toast-body">
-                    Hello, world! This is a toast message.
-                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <button type="button" class="btn btn-primary" onclick="toast('Default')">Toast Test</button>
+                <button type="button" class="btn btn-success" onclick="toast('bg-success', 'bg-success')">Toast Test</button>
+                <button type="button" class="btn btn-info" onclick="toast('bg-into', 'bg-info')">Toast Test</button>
+                <button type="button" class="btn btn-danger" onclick="toast('bg-danger', 'bg-danger')">Toast Test</button>
             </div>
         </div>
     </main>
+
+    <div id="toast-notifications" class="toast-container position-absolute p-3 bottom-0 end-0"></div>
+
+    <div id="toast-template" hidden>
+        <div class="toast fade hide" role="alert">
+            <div class="toast-header bg-primary text-white">
+                <strong class="me-auto">Toast</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

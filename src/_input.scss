@@ -3,7 +3,7 @@
 ///<reference path="_variablesDark.scss" />
 ///<reference path="../node_modules/bootstrap/scss/bootstrap.scss" />
 
-.form-control, .custom-select {
+.form-control, .form-select {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -30,7 +30,7 @@
 }
 
 .form-control.input-validation-error {
-   // @extend .form-control.is-invalid;
+    // @extend .form-control.is-invalid;
 
     &:focus:not(:read-only) {
         border-bottom-color: $danger;
@@ -75,8 +75,8 @@ select {
 .custom-control-label, .custom-control-input,
 label.form-check, label.form-check-inline {
     cursor: pointer;
-    display:inline-block;
-    margin-bottom:0;
+    display: inline-block;
+    margin-bottom: 0;
 }
 
 .form-group .custom-file label.custom-file-label {
@@ -98,13 +98,11 @@ label.form-check, label.form-check-inline {
     padding-left: 25px;
 }
 
-
-// Hide the default select arrow
-.custom-select {
-    /* for Firefox */
-    -moz-appearance: none;
-    /* for Chrome */
-    -webkit-appearance: none;
+.form-control::file-selector-button {
+    border-top: 1px $input-border-color solid;
+    border-left: 1px $input-border-color solid;
+    border-right: 1px $input-border-color solid;
+    border-top-left-radius: $border-radius;
 }
 
 ::-webkit-calendar-picker-indicator {

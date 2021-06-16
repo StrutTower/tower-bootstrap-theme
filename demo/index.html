@@ -4,7 +4,8 @@
     <title>Tower Bootstrap Theme</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../dist/tower-dark-theme.min.css" rel="stylesheet" />
+    <link href="../dist/tower-dark-theme.min.css" rel="stylesheet" id="dark-stylesheet" />
+    <link href="../dist/tower-light-theme.min.css" rel="stylesheet" id="light-stylesheet" disabled />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
     <link type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet" />
@@ -23,6 +24,8 @@
         </div>
     </nav>
     <main class="container">
+        <button type="button" class="btn btn-secondary float-end" id="theme-switch">Change Themes</button>
+
 
         <p>
             <a href="buttons.html">Buttons and Dropdowns</a>

@@ -4,7 +4,8 @@
     <title>Carousel | Tower Bootstrap Theme</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../dist/tower-dark-theme.min.css" rel="stylesheet" />
+    <link href="../dist/tower-dark-theme.min.css" rel="stylesheet" id="dark-stylesheet" />
+    <link href="../dist/tower-light-theme.min.css" rel="stylesheet" id="light-stylesheet" disabled />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
     <link type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet" />
@@ -24,6 +25,8 @@
     </nav>
 
     <main class="container">
+        <button type="button" class="btn btn-secondary float-end" id="theme-switch">Change Themes</button>
+
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
             <li class="breadcrumb-item active">Carousel</li>
@@ -41,7 +44,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="d-block w-100" style="height:200px;background:#808080;text-align:center;">
-                        <h3 style="padding-top:50px;">First slide</h3>
+                        <h3 style="padding-top:50px;" class="text-white">First slide</h3>
                     </div>
                     <div class="carousel-caption d-none d-md-block">
                         <h5>First slide</h5>
@@ -50,7 +53,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="d-block w-100" style="height:200px;background:#808080;text-align:center;">
-                        <h3 style="padding-top:50px;">Second slide</h3>
+                        <h3 style="padding-top:50px;" class="text-white">Second slide</h3>
                     </div>
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Second slide</h5>
@@ -59,7 +62,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="d-block w-100" style="height:200px;background:#808080;text-align:center;">
-                        <h3 style="padding-top:50px;">Third slide</h3>
+                        <h3 style="padding-top:50px;" class="text-white">Third slide</h3>
                     </div>
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Third slide</h5>

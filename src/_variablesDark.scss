@@ -16,6 +16,7 @@ $body-color: #F1F1F1 !default;
 
 $primary: #007acc !default;
 $secondary: $gray-700 !default;
+$info: teal !default;
 $dark: $gray-900 !default;
 
 $text-muted: lighten(#6c757d, 3) !default;
@@ -24,11 +25,15 @@ $input-bg: lighten($body-bg, 3) !default;
 $input-disabled-bg: lighten($body-bg, 1) !default;
 $input-border-color: lighten($body-bg, 10) !default;
 $input-placeholder-color: $gray-500 !default;
+
+$form-select-focus-border-color: $primary;
 $optgroup-background: darken($input-bg, 5) !default;
 
-$label-opacity:0.7 !default;
+$label-opacity: 0.7 !default;
 
 $hr-border-color: lighten($body-bg, 10) !default;
+
+$toast-background-color: $dark !default;
 
 $custom-select-focus-border-color: $primary !default;
 $custom-select-focus-box-shadow: none !default;
@@ -37,4 +42,4 @@ $custom-control-indicator-disabled-bg: lighten($body-bg, 10) !default;
 
 $webkit-picker-indicator-filter: 70% !default;
 
-
+$card-header-bg: rgba(0,0,0,0.1) !default;
