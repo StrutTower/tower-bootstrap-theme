@@ -4,15 +4,14 @@
 @import "variables";
 @import "variablesDark";
 
-@import "../node_modules/dark-bootstrap-theme/src/darkVariables";
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import "../node_modules/dark-bootstrap-theme/src/plugins/allPlugins";
-@import "../node_modules/dark-bootstrap-theme/src/fixes";
 
 @import "input";
 @import "carousel";
 @import "breadcrumbs";
 @import "other";
+@import "darkFixes";
+@import "plugins/allPlugins";
 
 .btn.btn-secondary:hover, .btn.btn-secondary:focus {
     background: darken($secondary,2);
@@ -34,4 +33,8 @@
 // Set bold font to white to help it stand out more like it does in the light theme
 .fw-semibold, .fw-bold, strong {
     color: #fff;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(70%);
 }

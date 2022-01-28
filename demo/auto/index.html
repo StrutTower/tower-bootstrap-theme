@@ -1,27 +1,26 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Dark Bootstrap Theme</title>
+    <title>Tower Bootstrap Theme</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dark-theme.css" media="(prefers-color-scheme: dark)" />
+    <link rel="stylesheet" href="light-theme.css" media="(prefers-color-scheme: light)" id="default-theme" />
     <script>
         // Fall back if the browser doesn't support prefers-color-scheme
         if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+            // Hide content until CSS loads to prevent show unstyled code.
             document.documentElement.style.display = 'none';
+
+            var defaultCssHref = document.getElementById('default-theme').getAttribute('href');
+
+            // Insert stylesheet with onload event to show page content.
             document.head.insertAdjacentHTML(
                 'beforeend',
-                '<link href="dark-theme.css" rel="stylesheet" onload="document.documentElement.style.display=\'\'" />'
+                '<link href="' + defaultCssHref + '" rel="stylesheet" onload="document.documentElement.style.display=\'\'" />'
             );
-            window.addEventListener('load', function () {
-                document.getElementById('not-supported-warning').style.display = '';
-            });
         }
     </script>
-    <link href="light-theme.css" rel="stylesheet" media="(prefers-color-scheme: light)" />
-    <link href="dark-theme.css" rel="stylesheet" media="(prefers-color-scheme: dark)" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
-    <link type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet" />
     <style>
         .display-5 {
             font-size: 2rem;
@@ -60,18 +59,23 @@
         </div>
     </nav>
     <main class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Homepage</a></li>
+            <li class="breadcrumb-item active">Auto Theme Switching</li>
+        </ol>
+
         <div id="not-supported-warning" class="text-center alert alert-danger" style="display:none;">
             Your browser does not support the prefers-color-scheme media query to automatically switch between light and dark themes. Defaulting to dark theme.
         </div>
 
         <div class="text-center alert alert-info" id="light-theme-message">
             <h5>prefers-color-scheme = <strong>light</strong></h5>
-            <div>Change your device's system theme to change themes</div>
+            <div>Change your device's system theme or your browser's theme to change themes</div>
         </div>
 
         <div class="text-center alert alert-info" id="dark-theme-message">
             <h5>prefers-color-scheme = <strong>dark</strong></h5>
-            <div>Change your device's system theme to change themes</div>
+            <div>Change your device's system theme or your browser's theme to change themes</div>
         </div>
 
         <p>
@@ -82,21 +86,24 @@
         <div class="card">
             <div class="card-body p-0">
                 <pre class="px-3 pt-2"><code style="font-size:0.8rem;">&lt;head&gt;
+    &lt;link href="light-theme.css" rel="stylesheet" media="(prefers-color-scheme: light)" /&gt;
+    &lt;link href="dark-theme.css" rel="stylesheet" media="(prefers-color-scheme: dark)" id="default-theme" /&gt;
     &lt;script&gt;
-        <span class="text-success">// Fall back if the browser doesn't support prefers-color-scheme</span>
+                <span class="text-success">// Fall back if the browser doesn't support prefers-color-scheme</span>
         if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
-            <span class="text-success">// Hide content until CSS loads to prevent show unstyled code.</span>
-            document.documentElement.style.display = 'none'; 
+                <span class="text-success">// Hide content until CSS loads to prevent show unstyled code.</span>
+            document.documentElement.style.display = 'none';
 
-            <span class="text-success">// Insert stylesheet with onload event to show page content.</span>
+                <span class="text-success">// Get the default theme's path.</span>
+            var defaultCssHref = document.getElementById('default-theme').getAttribute('href');
+
+                <span class="text-success">// Insert stylesheet with onload event to show page content.</span>
             document.head.insertAdjacentHTML(
                 'beforeend',
-                '&lt;link href="dark-theme.css" rel="stylesheet" onload="document.documentElement.style.display=\'\'" /&gt;'
+                '&lt;link href="' + defaultCssHref + '" rel="stylesheet" onload="document.documentElement.style.display=\'\'" /&gt;'
             );
         }
     &lt;/script&gt;
-    &lt;link href="light-theme.css" rel="stylesheet" media="(prefers-color-scheme: light)" /&gt;
-    &lt;link href="dark-theme.css" rel="stylesheet" media="(prefers-color-scheme: dark)" /&gt;
 &lt;/head&gt;
 </code></pre>
             </div>
@@ -111,10 +118,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script src="../scripts.js"></script>
 </body>
 </html>

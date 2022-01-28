@@ -14,3 +14,7 @@
     color:#aaa;
     border-color:#ccc;
 }
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(30%);
+}

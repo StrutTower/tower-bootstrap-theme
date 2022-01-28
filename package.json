@@ -1,13 +1,12 @@
 {
   "name": "tower-bootstrap-theme",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "description": "",
   "main": "index.js",
   "author": "StrutTower",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "5.0.1",
-    "dark-bootstrap-theme": "5.0.0"
+    "bootstrap": "5.1.2"
   },
   "devDependencies": {
     "gulp": "4.0.2",
