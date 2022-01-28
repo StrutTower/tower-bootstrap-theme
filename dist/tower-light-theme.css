@@ -11218,6 +11218,15 @@ label.form-check, label.form-check-inline {
   text-shadow: 2px 2px 5px black;
 }
 
+.btn.btn-outline-light {
+  color: #aaa;
+  border-color: #ccc;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(30%);
+}
+
 .text-faded {
   opacity: 0.7;
 }
@@ -11281,13 +11290,4 @@ fieldset legend {
   padding-left: 0.3rem;
   padding-right: 0.3rem;
   margin-bottom: 0;
-}
-
-.btn.btn-outline-light {
-  color: #aaa;
-  border-color: #ccc;
-}
-
-::-webkit-calendar-picker-indicator {
-  filter: invert(30%);
 }

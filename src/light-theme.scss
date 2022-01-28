@@ -8,13 +8,5 @@
 @import "input";
 @import "carousel";
 @import "breadcrumbs";
+@import "fixesLight";
 @import "other";
-
-.btn.btn-outline-light {
-    color:#aaa;
-    border-color:#ccc;
-}
-
-::-webkit-calendar-picker-indicator {
-    filter: invert(30%);
-}

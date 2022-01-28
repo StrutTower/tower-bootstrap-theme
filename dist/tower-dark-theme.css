@@ -11338,6 +11338,31 @@ fieldset legend {
   border-color: #2f2f33;
 }
 
+.btn.btn-secondary:hover, .btn.btn-secondary:focus {
+  background: #3d3d43;
+  border-color: #3d3d43;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-secondary.dropdown-toggle {
+  background: #39393e;
+  border-color: #39393e;
+}
+
+.btn.btn-dark:hover, .btn.btn-dark:focus {
+  background: #1b1b1e;
+  border-color: #1b1b1e;
+}
+
+.fw-semibold, .fw-bold, strong {
+  color: #fff;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(70%);
+}
+
 .select2-container.select2-container--default .select2-selection--single, .select2-container.select2-container--default .select2-selection--multiple {
   background: #313136;
   border-bottom: 1px solid #424249;
@@ -11402,29 +11427,4 @@ div.note-editor.note-frame .note-editing-area .note-editable {
 div.note-editor.note-frame .note-statusbar {
   background: #252529;
   border-top-color: #424249;
-}
-
-.btn.btn-secondary:hover, .btn.btn-secondary:focus {
-  background: #3d3d43;
-  border-color: #3d3d43;
-}
-
-.btn-secondary:not(:disabled):not(.disabled).active,
-.btn-secondary:not(:disabled):not(.disabled):active,
-.show > .btn-secondary.dropdown-toggle {
-  background: #39393e;
-  border-color: #39393e;
-}
-
-.btn.btn-dark:hover, .btn.btn-dark:focus {
-  background: #1b1b1e;
-  border-color: #1b1b1e;
-}
-
-.fw-semibold, .fw-bold, strong {
-  color: #fff;
-}
-
-::-webkit-calendar-picker-indicator {
-  filter: invert(70%);
 }
