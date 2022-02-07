@@ -64,10 +64,11 @@ fieldset {
 
     legend {
         width: auto;
-        margin-left: .3rem;
-        font-size: 1rem;
+        float: none;
+        font-size:1.1rem;
         padding-left: 0.3rem;
         padding-right: 0.3rem;
+        margin-left: .3rem;
         margin-bottom: 0;
     }
 }
