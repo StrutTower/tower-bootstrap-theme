@@ -30,16 +30,22 @@
 }
 
 .form-control.input-validation-error {
-    // @extend .form-control.is-invalid;
-
     &:focus:not(:read-only) {
         border-bottom-color: $danger;
         box-shadow: none;
     }
 }
 
+
+
+// ASP.NET validation error messages
 .field-validation-error, .validation-summary-errors {
     color: $danger;
+}
+
+// jQuery validation input validation error
+.form-control.input-validation-error {
+    border-color: $danger;
 }
 
 input[type="color"].form-control {
@@ -53,7 +59,7 @@ input[type="color"]:not(.form-control) {
     height: 1.8rem;
 }
 
-.form-group label:not(.form-check-label):not(.form-check):not(.form-check-inline):not(.custom-control-label) {
+label {
     font-size: 0.7rem;
     text-transform: uppercase;
     margin-bottom: 0;
@@ -61,30 +67,44 @@ input[type="color"]:not(.form-control) {
     opacity: $label-opacity;
 }
 
-select {
-    option {
-        background: $input-bg;
-    }
+label.form-check-label {
+    font-size: 1rem;
+    text-transform: none;
+    margin-left: 0;
+    opacity: 1;
+}
 
+.form-floating > label {
+    font-size: 1rem;
+    text-transform: none;
+    margin-left: 0;
+    opacity: .7;
+    transform: translateY(-8px);
+}
+
+.form-select {
     optgroup {
         background: $optgroup-background;
+    }
+
+    &[multiple] {
+        option:checked {
+            background: darken($primary, 10);
+            color: $white;
+        }
+
+        option:hover {
+            color: $white;
+            background: darken($primary, 15);
+        }
     }
 }
 
 .form-check-label, .form-check-input,
-.custom-control-label, .custom-control-input,
 label.form-check, label.form-check-inline {
     cursor: pointer;
     display: inline-block;
     margin-bottom: 0;
-}
-
-.form-group .custom-file label.custom-file-label {
-    font-size: 1rem !important;
-    text-transform: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
 }
 
 .form-help-text {
@@ -104,5 +124,3 @@ label.form-check, label.form-check-inline {
     border-right: 1px $input-border-color solid;
     border-top-left-radius: $border-radius;
 }
-
-

@@ -47,4 +47,15 @@
             opacity: 0.6;
         }
     }
+
+    &.select2-container--focus .select2-selection--multiple {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom-color: $primary;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }

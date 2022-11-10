@@ -1,26 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "tower-bootstrap-theme", ".", "{DBABC562-911E-40DB-A1AD-932555B3F22A}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_52307"
-		Debug.AspNetCompiler.PhysicalPath = "."
+		Debug.AspNetCompiler.PhysicalPath = "..\tower-bootstrap-theme\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52307\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_52307"
-		Release.AspNetCompiler.PhysicalPath = "."
+		Release.AspNetCompiler.PhysicalPath = "..\tower-bootstrap-theme\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52307\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "52307"
+		SlnRelativePath = "..\tower-bootstrap-theme\"
 	EndProjectSection
 EndProject
 Global

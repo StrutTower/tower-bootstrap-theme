@@ -35,23 +35,9 @@
     z-index:1040;
 }
 
-.note-btn.btn-sm {
-    padding: .125rem .5rem;
-    font-size: 1rem;
-}
 // Adds a shadow to dropdown menus
 .dropdown-menu.show {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-}
-
-// ASP.NET validation error messages
-.field-validation-error, .validation-summary-errors {
-    color: $danger;
-}
-
-// jQuery validation input validation error
-.form-control.input-validation-error {
-    border-color: $danger;
 }
 
 // Revert fieldsets to more default styling

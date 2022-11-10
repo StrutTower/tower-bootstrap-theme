@@ -18,5 +18,8 @@ $input-btn-padding-y-lg: .25rem !default;
 $input-btn-padding-x-lg: 0.5rem !default;
 
 $input-focus-box-shadow: none !default;
+$form-select-focus-box-shadow: none !default;
 
-$form-floating-label-transform: scale(.85) translateY(-.8rem) translateX(.15rem) !default;
+$form-floating-height: 2.5rem !default;
+$form-floating-input-padding-b: .9rem !default;
+$form-floating-label-transform: scale(.80) translateY(-1.2rem) translateX(.5rem) !default;

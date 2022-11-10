@@ -116,6 +116,7 @@ $dropdown-link-hover-bg: lighten($body-bg,3) !default;
 
 // Code
 $kbd-bg: darken($body-bg, 5) !default;
+$kbd-color: $body-color !default;
 
 // Toasts
 $toast-background-color: darken($body-bg, 3) !default;
