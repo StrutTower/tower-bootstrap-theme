@@ -32,7 +32,7 @@
         <h2 class="display-4">Forms</h2>
         <hr />
         <div class="row">
-            <div class="col-12 col-sm-7 mb-3">
+            <div class="col-12 col-sm-6 mb-3">
                 <form>
                     <div class="row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
@@ -99,14 +99,18 @@
                     </div>
                 </form>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-12 col-sm-5">
+            <div class="col-12 col-sm-6 mb-3">
                 <div class="mb-3">
                     <fieldset disabled="">
-                        <label class="control-label" for="disabledInput">Disabled input</label>
-                        <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+                        <div class="mb-3">
+                            <label class="control-label" for="disabledInput">Disabled input</label>
+                            <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+                        </div>
+                        <label class="control-label" for="disabledInput">Disabled select</label>
+                        <select class="form-select" id="disabledSelect" disabled="">
+                            <option value="1">Option 1</option>
+                        </select>
                     </fieldset>
                 </div>
 
@@ -160,6 +164,21 @@
                 <div class="mb-3">
                     <label for="exampleInputFile">Custom File input</label>
                     <input type="file" class="form-control" id="customFile">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <h5>Input Group</h5>
+            <div class="col">
+                <div class="input-group">
+                    <input type="text" class="form-control" />
+                    <select class="form-select">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                    <button type="button" class="btn btn-primary">Search</button>
                 </div>
             </div>
         </div>

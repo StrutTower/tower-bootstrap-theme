@@ -19,13 +19,13 @@
     }
 }
 
-.input-group {
-    .form-control {
-        border-right: 1px solid $input-border-color;
+.input-group > .form-control, .input-group > .form-select {
+    border-right: 1px solid $input-border-color;
+    margin-right: 1px;
 
-        .input-group-append .form-control:last-child {
-            border-left: none;
-        }
+    &:last-child {
+        border-left: none;
+        margin-right: 0;
     }
 }
 
@@ -44,7 +44,7 @@
 }
 
 // jQuery validation input validation error
-.form-control.input-validation-error {
+.form-control.input-validation-error, .form-select.input-validation-error {
     border-color: $danger;
 }
 
@@ -60,10 +60,10 @@ input[type="color"]:not(.form-control) {
 }
 
 label {
-    font-size: 0.7rem;
+    font-size: 0.7em;
     text-transform: uppercase;
     margin-bottom: 0;
-    margin-left: 0.4rem;
+    margin-left: 0.4em;
     opacity: $label-opacity;
 }
 
@@ -83,6 +83,8 @@ label.form-check-label {
 }
 
 .form-select {
+    -moz-padding-start: $input-padding-x;
+
     optgroup {
         background: $optgroup-background;
     }
@@ -97,6 +99,10 @@ label.form-check-label {
             color: $white;
             background: darken($primary, 15);
         }
+    }
+
+    &:disabled {
+        background: $input-disabled-bg;
     }
 }
 

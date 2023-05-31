@@ -1,6 +1,8 @@
-﻿@import "variables";
-@import "variablesLight";
+﻿///<reference path="_variablesDark.scss" />
+///<reference path="../node_modules/bootstrap/scss/bootstrap.scss" />
 
+@import "variables";
+@import "variablesLight";
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -9,3 +11,4 @@
 @import "breadcrumbs";
 @import "other";
 @import "fixesLight";
+@import "plugins/allPlugins";

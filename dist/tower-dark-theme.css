@@ -104,7 +104,7 @@ hr {
   margin: 1rem 0;
   color: inherit;
   border: 0;
-  border-top: 1px solid #424249;
+  border-top: 1px solid #73737e;
   opacity: 0.25;
 }
 
@@ -4657,7 +4657,7 @@ textarea.form-control-lg {
   --bs-breadcrumb-border-radius: ;
   --bs-breadcrumb-divider-color: #5b5b63;
   --bs-breadcrumb-item-padding-x: 0.5rem;
-  --bs-breadcrumb-item-active-color: #5b5b63;
+  --bs-breadcrumb-item-active-color: #8d8d97;
   display: flex;
   flex-wrap: wrap;
   padding: var(--bs-breadcrumb-padding-y) var(--bs-breadcrumb-padding-x);
@@ -11806,11 +11806,13 @@ textarea.form-control-lg {
   border-bottom-color: #007acc;
 }
 
-.input-group .form-control {
+.input-group > .form-control, .input-group > .form-select {
   border-right: 1px solid #424249;
+  margin-right: 1px;
 }
-.input-group .form-control .input-group-append .form-control:last-child {
+.input-group > .form-control:last-child, .input-group > .form-select:last-child {
   border-left: none;
+  margin-right: 0;
 }
 
 .form-control.input-validation-error:focus:not(:read-only) {
@@ -11822,7 +11824,7 @@ textarea.form-control-lg {
   color: #dc3545;
 }
 
-.form-control.input-validation-error {
+.form-control.input-validation-error, .form-select.input-validation-error {
   border-color: #dc3545;
 }
 
@@ -11838,10 +11840,10 @@ input[type=color]:not(.form-control) {
 }
 
 label {
-  font-size: 0.7rem;
+  font-size: 0.7em;
   text-transform: uppercase;
   margin-bottom: 0;
-  margin-left: 0.4rem;
+  margin-left: 0.4em;
   opacity: 0.7;
 }
 
@@ -11860,6 +11862,9 @@ label.form-check-label {
   transform: translateY(-8px);
 }
 
+.form-select {
+  -moz-padding-start: 0.4rem;
+}
 .form-select optgroup {
   background: #252529;
 }
@@ -11870,6 +11875,9 @@ label.form-check-label {
 .form-select[multiple] option:hover {
   color: #fff;
   background: #004c80;
+}
+.form-select:disabled {
+  background: #2c2c31;
 }
 
 .form-check-label, .form-check-input,
@@ -12112,4 +12120,71 @@ div.note-editor.note-frame .note-statusbar {
 .note-btn.btn-sm, .btn-group-sm > .note-btn.btn {
   padding: 0.125rem 0.5rem;
   font-size: 1rem;
+}
+
+:root {
+  --ss-primary-color: #007acc;
+  --ss-bg-color: #313136;
+  --ss-font-color: #F1F1F1;
+  --ss-font-placeholder-color: #73737e;
+  --ss-disabled-color: ;
+  --ss-border-color: #424249;
+  --ss-highlight-color: #007acc;
+  --ss-success-color: #198754;
+  --ss-error-color: #dc3545;
+  --ss-main-height: 30px;
+  --ss-border-radius: 2px 2px 0 0;
+}
+
+.ss-main {
+  border: none;
+  border-bottom: 1px solid #424249;
+}
+.ss-main:focus {
+  box-shadow: none;
+  border-bottom-color: #007acc;
+}
+.ss-main.ss-disabled:focus {
+  box-shadow: none;
+  border-bottom-color: #424249;
+}
+
+.ss-content .ss-search input {
+  background: #2a2a2e;
+  color: #F1F1F1;
+  border: none;
+  border-bottom: 1px solid #424249;
+}
+.ss-content .ss-search input:focus {
+  box-shadow: none;
+  border-bottom-color: #007acc;
+}
+.ss-content .ss-list .ss-option.ss-highlighted, .ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
+  color: #fff;
+}
+.ss-content .ss-list .ss-option:hover {
+  color: #fff;
+  background-color: #006bb3;
+}
+
+.ss-main .ss-values .ss-value .ss-value-text {
+  color: #fff;
+}
+.ss-main .ss-values .ss-value .ss-value-delete {
+  border-left-color: rgba(255, 255, 255, 0.2);
+  height: 1rem;
+}
+.ss-main .ss-values .ss-value .ss-value-delete svg path {
+  stroke: rgba(255, 255, 255, 0.5);
+}
+
+.input-group > .ss-main {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+}
+
+select.slim-select-basic {
+  opacity: 0;
 }

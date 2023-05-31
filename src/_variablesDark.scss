@@ -44,7 +44,7 @@ $form-range-track-bg: darken($body-bg, 5) !default;
 
 $label-opacity: 0.7 !default;
 
-$hr-border-color: lighten($body-bg, 10) !default;
+$hr-border-color: lighten($body-bg, 30) !default;
 
 $toast-background-color: $dark !default;
 
@@ -56,6 +56,8 @@ $custom-control-indicator-disabled-bg: lighten($body-bg, 10) !default;
 $webkit-picker-indicator-filter: 70% !default;
 
 $card-header-bg: rgba(0,0,0,0.1) !default;
+
+$breadcrumb-active-color: $gray-400 !default;
 
 
 // Navs
