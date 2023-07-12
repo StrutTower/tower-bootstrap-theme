@@ -1,8 +1,13 @@
 ﻿$body-color: #212529 !default;
 $body-bg: #eee !default;
-$primary: darken(#007bff, 5) !default;
-$info: teal !default;
+$primary: #0068d8 !default;
+$info: #017878 !default;
+$danger: #D12335 !default;
 $light: darken($body-bg, 20) !default;
+
+
+$code-color: #c62a78 !default;
+
 
 $input-bg: darken($body-bg, 5) !default;
 $input-border-color: darken($body-bg, 15) !default;

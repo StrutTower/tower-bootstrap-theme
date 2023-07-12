@@ -9,6 +9,14 @@
     border-color: #ccc;
 }
 
+.text-success, .valid-feedback {
+    color: #077a44 !important;
+}
+
+.text-warning {
+    color: #C99805 !important;
+}
+
 ::-webkit-calendar-picker-indicator {
     filter: invert(30%);
 }

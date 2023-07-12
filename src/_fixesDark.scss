@@ -12,6 +12,22 @@
     filter: none !important;
 }
 
+.text-primary {
+    color: #0696F7 !important;
+}
+
+.text-success, .valid-feedback {
+    color: #19B069 !important;
+}
+
+.text-info {
+    color: #00AEAE !important;
+}
+
+.text-danger, .invalid-feedback {
+    color: #ff5353 !important;
+}
+
 .dropdown-menu {
     box-shadow: $box-shadow-lg;
 }

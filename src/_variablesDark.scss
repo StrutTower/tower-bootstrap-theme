@@ -20,7 +20,7 @@ $secondary: $gray-700 !default;
 $info: teal !default;
 $dark: $gray-900 !default;
 
-$link-color: lighten($primary, 10) !default;
+$link-color: #1497ee !default;
 
 $text-muted: lighten(#6c757d, 3) !default;
 
@@ -30,6 +30,9 @@ $input-color: $body-color !default;
 $input-border-color: lighten($body-bg, 10) !default;
 $input-placeholder-color: $gray-500 !default;
 $input-group-addon-bg: darken($body-bg, 1) !default;
+
+$form-file-button-bg: $secondary !default;
+$form-file-button-hover-bg: darken($secondary, 3) !default;
 
 $form-check-input-bg: darken($body-bg, 5) !default;
 $form-check-input-border: 1px solid $input-border-color !default;
@@ -57,7 +60,11 @@ $webkit-picker-indicator-filter: 70% !default;
 
 $card-header-bg: rgba(0,0,0,0.1) !default;
 
-$breadcrumb-active-color: $gray-400 !default;
+$breadcrumb-active-color: $gray-300 !default;
+
+$blockquote-footer-color: darken($gray-300, 5) !default;
+
+$code-color: #f850a4 !default;
 
 
 // Navs
