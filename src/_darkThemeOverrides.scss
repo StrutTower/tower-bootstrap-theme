@@ -1,0 +1,5 @@
+﻿@include color-mode(dark) {
+    .form-control, .form-select {
+        background: lighten($body-bg-dark, 3);
+    }
+}
