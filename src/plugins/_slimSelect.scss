@@ -17,7 +17,7 @@
 
 .ss-main {
     border: none;
-    border-bottom: 1px solid $input-border-color;
+    border-bottom: 1px solid var(--ss-border-color);
 
 
     &:focus {
@@ -82,4 +82,17 @@
 // Prevent the select from showing up before the plugin loads
 select.slim-select-basic {
     opacity: 0;
+}
+
+
+@include color-mode(dark) {
+    --ss-bg-color: #{$dark-input-bg};
+    --ss-border-color: #{$dark-input-border-color};
+
+    .ss-content {
+        .ss-search input {
+            color: $body-color-dark;
+            background: darken($dark-input-bg, 3);
+        }
+    }
 }

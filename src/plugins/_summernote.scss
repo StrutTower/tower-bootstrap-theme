@@ -9,6 +9,7 @@ div.note-editor.note-frame {
         border-bottom: 1px solid $input-border-color;
 
         & > .note-btn-group {
+            border: 1px solid $input-border-color;
 
             .note-btn {
                 background: $body-bg;
@@ -23,9 +24,9 @@ div.note-editor.note-frame {
                 }
             }
 
-            .btn-light {
+            /*.btn-light {
                 border-color: $input-border-color;
-            }
+            }*/
         }
     }
 

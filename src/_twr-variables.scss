@@ -1,0 +1,56 @@
+﻿$body-color: #212529 !default;
+$body-bg: #eee !default;
+
+$primary: #0068d8 !default;
+$info: #017878 !default;
+$danger: #D12335 !default;
+$light: darken($body-bg, 20) !default;
+
+
+/* border radius */
+$border-radius: 2px 2px 0 0 !default;
+$border-radius-sm: 2px 2px 0 0 !default;
+$border-radius-lg: 2px 2px 0 0 !default;
+$border-radius-xl: 2px 2px 0 0 !default;
+$border-radius-xxl: 2px 2px 0 0 !default;
+$border-radius-pill: 2px 2px 0 0 !default;
+
+/* nav */
+$nav-link-padding-y: .2rem !default;
+
+/* input */
+$input-btn-padding-y: .125rem !default;
+$input-btn-padding-x: .4rem !default;
+
+$input-btn-padding-y-sm: .1rem !default;
+$input-btn-padding-x-sm: .25rem !default;
+
+$input-btn-padding-y-lg: .25rem !default;
+$input-btn-padding-x-lg: 0.5rem !default;
+
+$input-bg: darken($body-bg, 5) !default;
+$input-border-color: darken($body-bg, 15) !default;
+$input-focus-border-color: $primary !default;
+
+$input-disabled-bg: lighten($input-bg, 4);
+
+$focus-ring-width: 0 !default;
+
+
+$form-range-thumb-focus-box-shadow: 0 0 0 1px darken($primary, 5); // none !default; //0 0 0 1px $body-bg, $input-focus-box-shadow !default;
+/*$form-range-thumb-focus-box-shadow-width: 0 !default; //$input-focus-width !default; // For focus box shadow issue in Edge*/
+/* buttons */
+$btn-box-shadow: none;
+
+/* floating label */
+$form-floating-label-transform: scale(.85) translateY(-.8rem) translateX(.15rem) !default;
+
+
+/* tables */
+$table-striped-bg-factor: .03 !default;
+
+/* Badges */
+$badge-border-radius: .5rem;
+$border-radius-pill: 1em;
+
+

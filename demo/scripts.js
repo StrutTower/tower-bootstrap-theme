@@ -12,14 +12,12 @@
 
     $('#theme-switch').on('click', function (e) {
         e.preventDefault();
-        var dark = $('#dark-stylesheet');
-        var light = $('#light-stylesheet');
-        if (dark.prop('disabled')) {
-            dark.prop('disabled', false);
-            light.prop('disabled', true);
+        theme = $('html').attr('data-bs-theme');
+
+        if (theme === 'dark') {
+            $('html').attr('data-bs-theme', 'light')
         } else {
-            light.prop('disabled', false);
-            dark.prop('disabled', true);
+            $('html').attr('data-bs-theme', 'dark')
         }
     });
 
