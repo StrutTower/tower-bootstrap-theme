@@ -22,13 +22,11 @@
 
 /* ASP.NET validation error messages */
 .field-validation-error, .validation-summary-errors {
-    /*color: $form-invalid-color;*/
     color: var(--bs-form-invalid-color);
 }
 
 /* jQuery validation input validation error */
 .form-control.input-validation-error, .form-select.input-validation-error {
-    /*border-color: $form-invalid-color;*/
     border-color: var(--bs-form-invalid-color);
 }
 
@@ -50,7 +48,8 @@ label {
     text-transform: uppercase;
     margin-bottom: 0;
     margin-left: 0.4em;
-    opacity: 0.8;
+    opacity: 0.7;
+    letter-spacing:0.5px;
 }
 
 label.form-check-label {
@@ -58,6 +57,7 @@ label.form-check-label {
     text-transform: none;
     margin-left: 0;
     opacity: 1;
+    letter-spacing: unset;
 }
 
 .form-floating > label {

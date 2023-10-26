@@ -1,4 +1,6 @@
-﻿$body-color: #212529 !default;
+﻿///<reference path="../node_modules/bootstrap/scss/variables.scss" />
+
+$body-color: #212529 !default;
 $body-bg: #eee !default;
 
 $primary: #0068d8 !default;
@@ -31,6 +33,8 @@ $input-btn-padding-x-lg: 0.5rem !default;
 $input-bg: darken($body-bg, 5) !default;
 $input-border-color: darken($body-bg, 15) !default;
 $input-focus-border-color: $primary !default;
+$input-placeholder-color: #888 !default;
+
 
 $input-disabled-bg: lighten($input-bg, 4);
 

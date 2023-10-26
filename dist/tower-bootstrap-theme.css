@@ -2158,7 +2158,7 @@ progress {
   padding: 0;
 }
 .form-control::placeholder {
-  color: var(--bs-secondary-color);
+  color: #888;
   opacity: 1;
 }
 .form-control:disabled {
@@ -11964,13 +11964,11 @@ textarea.form-control-lg {
 
 /* ASP.NET validation error messages */
 .field-validation-error, .validation-summary-errors {
-  /*color: $form-invalid-color;*/
   color: var(--bs-form-invalid-color);
 }
 
 /* jQuery validation input validation error */
 .form-control.input-validation-error, .form-select.input-validation-error {
-  /*border-color: $form-invalid-color;*/
   border-color: var(--bs-form-invalid-color);
 }
 
@@ -11992,7 +11990,8 @@ label {
   text-transform: uppercase;
   margin-bottom: 0;
   margin-left: 0.4em;
-  opacity: 0.8;
+  opacity: 0.7;
+  letter-spacing: 0.5px;
 }
 
 label.form-check-label {
@@ -12000,6 +11999,7 @@ label.form-check-label {
   text-transform: none;
   margin-left: 0;
   opacity: 1;
+  letter-spacing: unset;
 }
 
 .form-floating > label {
@@ -12072,6 +12072,27 @@ label.form-check, label.form-check-inline {
   border-color: #a2a2a2;
 }
 
+fieldset {
+  border: 1px solid #c8c8c8;
+  padding-top: 0.4rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+fieldset legend {
+  width: auto;
+  float: none;
+  font-size: 1.1rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  margin-left: 0.3rem;
+  margin-bottom: 0;
+}
+
+[data-bs-theme=dark] fieldset {
+  border-color: #424249;
+}
+
 div.note-editor.note-frame {
   border-color: #c8c8c8;
 }
@@ -12113,7 +12134,7 @@ div.note-editor.note-frame .note-statusbar {
   --ss-primary-color: #0068d8;
   --ss-bg-color: #e1e1e1;
   --ss-font-color: var(--bs-body-color);
-  --ss-font-placeholder-color: var(--bs-secondary-color);
+  --ss-font-placeholder-color: #888;
   --ss-disabled-color: ;
   --ss-border-color: #c8c8c8;
   --ss-highlight-color: #0068d8;
