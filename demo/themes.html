@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Alerts | Tower Bootstrap Theme</title>
+    <title>Theme Switcher | Tower Bootstrap Theme</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Demo of custom Bootstrap theme">
@@ -45,52 +45,55 @@
     <main class="container mt-5 pt-2">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
-            <li class="breadcrumb-item active">Alerts</li>
+            <li class="breadcrumb-item active">Theme Switcher</li>
         </ol>
 
-        <h2 class="display-4">Alerts</h2>
-        <hr />
-        <div class="row">
-            <div class="col-12 col-sm-6">
-                <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    This is a primary alert�check it out!
-                </div>
+
+        <p>
+            There are two CSS files provided in this repo that change how theme switching is handled.
+            One uses Bootstrap's default <code>data-bs-theme</code> attribute.
+            The other uses the prefers-color-scheme media query.
+        </p>
+
+        <p>
+            This will cover how to set up a theme switcher for the default attribute
+            method like you can see in the top right of this page.
+        </p>
+
+        <p>
+            First create a new JavaScript file with the following code. This should be separate from any bundling, if you are doing that.
+            This is because you want to include this code high up on the DOM to prevent the screen from flashing white when it loads.
+        </p>
+
+        <h5>ThemeHandler Javascript</h5>
+        <div class="card mb-3">
+            <div class="card-body bg-dark">
+                <pre><code id="javascript-code"></code></pre>
             </div>
-            <div class="col-12 col-sm-6">
-                <div class="alert alert-secondary" role="alert">
-                    This is a secondary alert�check it out!
-                </div>
-            </div>
-            <div class="col-12 col-sm-6">
-                <div class="alert alert-success" role="alert">
-                    This is a success alert�check it out!
-                </div>
-            </div>
-            <div class="col-12 col-sm-6">
-                <div class="alert alert-danger" role="alert">
-                    This is a danger alert�check it out!
-                </div>
-            </div>
-            <div class="col-12 col-sm-6">
-                <div class="alert alert-warning" role="alert">
-                    This is a warning alert�check it out!
-                </div>
-            </div>
-            <div class="col-12 col-sm-6">
-                <div class="alert alert-info" role="alert">
-                    This is a info alert�check it out!
-                </div>
-            </div>
-            <div class="col-12 col-sm-6">
-                <div class="alert alert-light" role="alert">
-                    This is a light alert�check it out!
-                </div>
-            </div>
-            <div class="col-12 col-sm-6">
-                <div class="alert alert-dark" role="alert">
-                    This is a dark alert�check it out!
-                </div>
+        </div>
+
+        <p>
+            Add a script tag to the head of the page. It needs to included early on the DOM to prevent the page from flashing white if someone has defaulted to a dark theme.
+        </p>
+
+        <p>
+            Add the following to the navbar's menu. This example is using Material Design Icons,
+            <a href="https://pictogrammers.com/library/mdi" target="_blank" rel="noopener noreferrer">https://pictogrammers.com/library/mdi</a>
+        </p>
+
+        <h5>Navbar Theme Selector HTML</h5>
+        <div class="card mb-3">
+            <div class="card-body bg-dark">
+                <pre><code>&lt;li class=&quot;nav-item dropdown&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;nav-link dropdown-toggle&quot; data-bs-toggle=&quot;dropdown&quot;&gt;
+        &lt;span id=&quot;current-theme&quot;&gt;&lt;/span&gt; &lt;span class=&quot;d-md-none&quot;&gt;Switch Themes&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;dropdown-menu&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;dropdown-item&quot; data-bs-theme-value=&quot;light&quot;&gt;&lt;span class=&quot;mdi mdi-weather-sunny&quot;&gt;&lt;/span&gt; Light&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;dropdown-item&quot; data-bs-theme-value=&quot;dark&quot;&gt;&lt;span class=&quot;mdi mdi-weather-night&quot;&gt;&lt;/span&gt; Dark&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;dropdown-item&quot; data-bs-theme-value=&quot;auto&quot;&gt;&lt;span class=&quot;mdi mdi-theme-light-dark&quot;&gt;&lt;/span&gt; Auto&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/li&gt;</code></pre>
             </div>
         </div>
 
@@ -105,6 +108,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('themeHandler.js')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('javascript-code').innerHTML = data;
+                });
+        });
+    </script>
 </body>
 
 </html>

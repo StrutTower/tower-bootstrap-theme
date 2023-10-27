@@ -175,10 +175,10 @@
     --bs-light-border-subtle: #424249;
     --bs-dark-border-subtle: #2A2A2E;
     --bs-heading-color: inherit;
-    --bs-link-color: #66a4e8;
-    --bs-link-hover-color: #85b6ed;
-    --bs-link-color-rgb: 102, 164, 232;
-    --bs-link-hover-color-rgb: 133, 182, 237;
+    --bs-link-color: #1497ee;
+    --bs-link-hover-color: #0e7ac1;
+    --bs-link-color-rgb: 20, 151, 238;
+    --bs-link-hover-color-rgb: 14, 122, 193;
     --bs-code-color: #e685b5;
     --bs-highlight-color: #F1F1F1;
     --bs-highlight-bg: #664d03;
@@ -2159,11 +2159,11 @@ progress {
   padding: 0;
 }
 .form-control::placeholder {
-  color: var(--bs-secondary-color);
+  color: #888;
   opacity: 1;
 }
 .form-control:disabled {
-  background-color: var(--bs-secondary-bg);
+  background-color: #ebebeb;
   opacity: 1;
 }
 .form-control::file-selector-button {
@@ -2300,7 +2300,7 @@ textarea.form-control-lg {
   background-image: none;
 }
 .form-select:disabled {
-  background-color: var(--bs-secondary-bg);
+  background-color: #ebebeb;
 }
 .form-select:-moz-focusring {
   color: transparent;
@@ -2631,7 +2631,7 @@ textarea.form-control-lg {
 }
 .form-floating > :disabled ~ label::after,
 .form-floating > .form-control:disabled ~ label::after {
-  background-color: var(--bs-secondary-bg);
+  background-color: #ebebeb;
 }
 
 .input-group {
@@ -11971,13 +11971,11 @@ textarea.form-control-lg {
 
 /* ASP.NET validation error messages */
 .field-validation-error, .validation-summary-errors {
-  /*color: $form-invalid-color;*/
   color: var(--bs-form-invalid-color);
 }
 
 /* jQuery validation input validation error */
 .form-control.input-validation-error, .form-select.input-validation-error {
-  /*border-color: $form-invalid-color;*/
   border-color: var(--bs-form-invalid-color);
 }
 
@@ -11999,7 +11997,8 @@ label {
   text-transform: uppercase;
   margin-bottom: 0;
   margin-left: 0.4em;
-  opacity: 0.8;
+  opacity: 0.7;
+  letter-spacing: 0.5px;
 }
 
 label.form-check-label {
@@ -12007,6 +12006,7 @@ label.form-check-label {
   text-transform: none;
   margin-left: 0;
   opacity: 1;
+  letter-spacing: unset;
 }
 
 .form-floating > label {
@@ -12040,7 +12040,7 @@ label.form-check-label {
   background: #00438c;
 }
 .form-select:disabled {
-  background: var(--bs-secondary-bg);
+  background: #ebebeb;
 }
 
 .form-check-label, .form-check-input,
@@ -12068,11 +12068,81 @@ label.form-check, label.form-check-inline {
   border-top-left-radius: 2px 2px 0 0;
 }
 
+.form-control:disabled, .form-control[readonly], .form-select:disabled, .form-select[readonly] {
+  color: #7e8b98;
+  background-color: #ebebeb;
+}
+.form-control:disabled::placeholder, .form-control[readonly]::placeholder, .form-select:disabled::placeholder, .form-select[readonly]::placeholder {
+  color: #7e8b98;
+}
+.form-control:focus[readonly], .form-select:focus[readonly] {
+  border-color: #a2a2a2;
+}
+
+fieldset {
+  border: 1px solid #c8c8c8;
+  padding-top: 0.4rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+fieldset legend {
+  width: auto;
+  float: none;
+  font-size: 1.1rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  margin-left: 0.3rem;
+  margin-bottom: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  fieldset {
+    border-color: #424249;
+  }
+}
+div.note-editor.note-frame {
+  border-color: #c8c8c8;
+}
+div.note-editor.note-frame div.note-toolbar {
+  background: #e9e9e9;
+  border-bottom: 1px solid #c8c8c8;
+}
+div.note-editor.note-frame div.note-toolbar > .note-btn-group {
+  border: 1px solid #c8c8c8;
+  /*.btn-light {
+      border-color: $input-border-color;
+  }*/
+}
+div.note-editor.note-frame div.note-toolbar > .note-btn-group .note-btn {
+  background: #eee;
+  color: #212529;
+}
+div.note-editor.note-frame div.note-toolbar > .note-btn-group .note-btn.active {
+  background: #0068d8;
+}
+div.note-editor.note-frame div.note-toolbar > .note-btn-group .note-btn:hover {
+  background: #e6e6e6;
+}
+div.note-editor.note-frame .note-editing-area .note-editable {
+  color: #212529;
+  background: #e1e1e1;
+}
+div.note-editor.note-frame .note-statusbar {
+  background: #e9e9e9;
+  border-top-color: #c8c8c8;
+}
+
+.note-btn.btn-sm, .btn-group-sm > .note-btn.btn {
+  padding: 0.125rem 0.5rem;
+  font-size: 1rem;
+}
+
 :root {
   --ss-primary-color: #0068d8;
   --ss-bg-color: #e1e1e1;
   --ss-font-color: var(--bs-body-color);
-  --ss-font-placeholder-color: var(--bs-secondary-color);
+  --ss-font-placeholder-color: #888;
   --ss-disabled-color: ;
   --ss-border-color: #c8c8c8;
   --ss-highlight-color: #0068d8;
@@ -12084,7 +12154,7 @@ label.form-check, label.form-check-inline {
 
 .ss-main {
   border: none;
-  border-bottom: 1px solid #c8c8c8;
+  border-bottom: 1px solid var(--ss-border-color);
 }
 .ss-main:focus {
   box-shadow: none;
@@ -12135,6 +12205,16 @@ select.slim-select-basic {
   opacity: 0;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ss-bg-color: #313136;
+    --ss-border-color: #424249;
+  }
+  .ss-content .ss-search input {
+    color: #F1F1F1;
+    background: #2a2a2e;
+  }
+}
 .form-control, .form-select {
   border-width: 0 0 1px 0;
 }

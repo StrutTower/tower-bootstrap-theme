@@ -10,15 +10,19 @@ $light: darken($body-bg, 20) !default;
 
 
 /* border radius */
-$border-radius: 2px 2px 0 0 !default;
-$border-radius-sm: 2px 2px 0 0 !default;
-$border-radius-lg: 2px 2px 0 0 !default;
-$border-radius-xl: 2px 2px 0 0 !default;
-$border-radius-xxl: 2px 2px 0 0 !default;
-$border-radius-pill: 2px 2px 0 0 !default;
+$border-radius: 2px !default;
+$border-radius-sm: 2px !default;
+$border-radius-lg: 3px !default;
+$border-radius-xl: 3px 0 0 !default;
+$border-radius-xxl: 4px !default;
 
 /* nav */
 $nav-link-padding-y: .2rem !default;
+
+$navbar-toggler-padding-y: 0 !default;
+$navbar-toggler-font-size: 1rem !default;
+$navbar-light-toggler-border-color: transparent !default;
+$navbar-dark-toggler-border-color: transparent !default;
 
 /* input */
 $input-btn-padding-y: .125rem !default;
@@ -36,6 +40,10 @@ $input-focus-border-color: $primary !default;
 $input-placeholder-color: #888 !default;
 
 
+$input-border-radius: 2px 2px 0 0 !default;
+$input-border-radius-sm: 2px 2px 0 0 !default;
+$input-border-radius-lg: 3px 3px 0 0 !default;
+
 $input-disabled-bg: lighten($input-bg, 4);
 
 $focus-ring-width: 0 !default;
@@ -52,9 +60,3 @@ $form-floating-label-transform: scale(.85) translateY(-.8rem) translateX(.15rem)
 
 /* tables */
 $table-striped-bg-factor: .03 !default;
-
-/* Badges */
-$badge-border-radius: .5rem;
-$border-radius-pill: 1em;
-
-

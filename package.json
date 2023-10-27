@@ -1,6 +1,6 @@
 {
   "name": "tower-bootstrap-theme",
-  "version": "5.3.3",
+  "version": "5.3.4",
   "description": "",
   "main": "index.js",
   "author": "StrutTower",
@@ -13,6 +13,8 @@
     "gulp-clean-css": "4.3.0",
     "gulp-dart-sass": "1.1.0",
     "gulp-concat": "2.6.1",
-    "gulp-rename": "2.0.0"
+    "gulp-rename": "2.0.0",
+    "gulp-file-include": "2.3.0",
+    "gulp-html-beautify": "1.0.1"
   }
 }
