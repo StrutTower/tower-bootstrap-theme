@@ -12129,7 +12129,8 @@ div.note-editor.note-frame .note-statusbar {
   font-size: 1rem;
 }
 
-:root {
+:root,
+[data-bs-theme=light] {
   --ss-primary-color: #0068d8;
   --ss-bg-color: #e1e1e1;
   --ss-font-color: var(--bs-body-color);

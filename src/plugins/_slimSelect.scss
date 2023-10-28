@@ -1,7 +1,8 @@
 ﻿///<reference path="../variables.scss" />
 ///<reference path="../../node_modules/bootstrap/scss/variables.scss" />
 
-:root {
+:root,
+[data-bs-theme=light] {
     --ss-primary-color: #{$primary};
     --ss-bg-color: #{$input-bg};
     --ss-font-color: #{$input-color};
@@ -70,7 +71,6 @@
         }
     }
 }
-
 // Bootstrap input-group support
 .input-group > .ss-main {
     position: relative;
@@ -84,8 +84,7 @@ select.slim-select-basic {
     opacity: 0;
 }
 
-
-@include color-mode(dark) {
+[data-bs-theme=dark] {
     --ss-bg-color: #{$dark-input-bg};
     --ss-border-color: #{$dark-input-border-color};
 

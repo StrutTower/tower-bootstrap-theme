@@ -10,9 +10,7 @@ var gulp = require('gulp')
 var options = {
     css: {
         sassMainFile: 'src/tower-bootstrap-theme.scss',
-        sassMainFile2: 'src/tower-bootstrap-theme-media-query.scss',
         output: 'tower-bootstrap-theme.css',
-        output2: 'tower-bootstrap-theme-media-query.css',
         sassFiles: 'src/**/*.scss',
         dest: 'dist'
     },
@@ -27,16 +25,6 @@ gulp.task('build-css', function () {
     return gulp.src(options.css.sassMainFile)
         .pipe(sass({ errLogToConsole: true }).on('error', sass.logError))
         .pipe(concat(options.css.output))
-        .pipe(gulp.dest(options.css.dest))
-        .pipe(cleancss())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(options.css.dest));
-});
-
-gulp.task('build-css-media-query', function () {
-    return gulp.src(options.css.sassMainFile2)
-        .pipe(sass({ errLogToConsole: true }).on('error', sass.logError))
-        .pipe(concat(options.css.output2))
         .pipe(gulp.dest(options.css.dest))
         .pipe(cleancss())
         .pipe(rename({ suffix: '.min' }))
@@ -58,4 +46,4 @@ gulp.task('watch-html', function () {
     return gulp.watch(options.html.watchFiles, gulp.parallel(['build-html']));
 })
 
-gulp.task('default', gulp.parallel(['build-css', 'build-css-media-query']));
+gulp.task('default', gulp.parallel(['build-css']));
