@@ -1,5 +1,6 @@
-﻿///<reference path="../variables.scss" />
-///<reference path="../../node_modules/bootstrap/scss/variables.scss" />
+﻿///<reference path="twr-variables.scss" />
+///<reference path="twr-variables-dark.scss" />
+///<reference path="../node_modules/bootstrap/scss/variables.scss" />
 
 div.note-editor.note-frame {
     border-color: $input-border-color;
@@ -23,10 +24,6 @@ div.note-editor.note-frame {
                     background: darken($body-bg,3);
                 }
             }
-
-            /*.btn-light {
-                border-color: $input-border-color;
-            }*/
         }
     }
 

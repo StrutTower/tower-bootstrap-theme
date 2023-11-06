@@ -16,3 +16,7 @@ $form-switch-color-dark: lighten($body-secondary-bg-dark, 10) !default;
 
 $form-invalid-color-dark: #ea868f !default;
 $form-invalid-border-color-dark: #ea868f !default;
+
+
+$input-border-color-dark: lighten($body-bg-dark, 10);
+$input-bg-dark: lighten($body-bg-dark, 3);

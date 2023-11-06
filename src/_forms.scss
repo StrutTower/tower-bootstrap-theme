@@ -1,5 +1,10 @@
 ﻿///<reference path="twr-variables.scss" />
+///<reference path="twr-variables-dark.scss" />
 ///<reference path="../node_modules/bootstrap/scss/variables.scss" />
+
+.form-control, .form-select {
+    border-width: 0 0 1px 0;
+}
 
 /* input group border fix */
 .input-group > .form-control, .input-group > .form-select {

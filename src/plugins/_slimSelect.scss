@@ -1,4 +1,5 @@
-﻿///<reference path="../variables.scss" />
+﻿///<reference path="../twr-variables.scss" />
+///<reference path="../twr-variables-dark.scss" />
 ///<reference path="../../node_modules/bootstrap/scss/variables.scss" />
 
 :root,
@@ -85,13 +86,21 @@ select.slim-select-basic {
 }
 
 [data-bs-theme=dark] {
-    --ss-bg-color: #{$dark-input-bg};
-    --ss-border-color: #{$dark-input-border-color};
+    --ss-bg-color: #{$input-bg-dark};
+    --ss-border-color: #{$input-border-color-dark};
 
     .ss-content {
         .ss-search input {
             color: $body-color-dark;
-            background: darken($dark-input-bg, 3);
+            background: darken($input-bg-dark, 3);
+        }
+    }
+
+    .ss-main.ss-disabled {
+        background: lighten($input-bg-dark, 5);
+
+        &:focus {
+            border-bottom-color: lighten($input-bg-dark, 5);
         }
     }
 }

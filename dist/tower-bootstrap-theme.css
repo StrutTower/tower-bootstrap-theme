@@ -11947,6 +11947,10 @@ textarea.form-control-lg {
   color: var(--bs-secondary-color);
 }
 
+.form-control, .form-select {
+  border-width: 0 0 1px 0;
+}
+
 /* input group border fix */
 .input-group > .form-control, .input-group > .form-select {
   border-right: 1px solid var(--bs-border-color);
@@ -12092,6 +12096,29 @@ fieldset legend {
   border-color: #424249;
 }
 
+.alert.alert-success a {
+  color: #198754;
+}
+.alert.alert-danger a {
+  color: #D12335;
+}
+.alert.alert-info a {
+  color: #017878;
+}
+
+[data-bs-theme=dark] .alert.alert-success a {
+  color: #157147;
+}
+[data-bs-theme=dark] .alert.alert-danger a {
+  color: #bb1f2f;
+}
+[data-bs-theme=dark] .alert.alert-warning a {
+  color: #edb100;
+}
+[data-bs-theme=dark] .alert.alert-info a {
+  color: #017878;
+}
+
 div.note-editor.note-frame {
   border-color: #c8c8c8;
 }
@@ -12101,9 +12128,6 @@ div.note-editor.note-frame div.note-toolbar {
 }
 div.note-editor.note-frame div.note-toolbar > .note-btn-group {
   border: 1px solid #c8c8c8;
-  /*.btn-light {
-      border-color: $input-border-color;
-  }*/
 }
 div.note-editor.note-frame div.note-toolbar > .note-btn-group .note-btn {
   background: #eee;
@@ -12205,7 +12229,9 @@ select.slim-select-basic {
   color: #F1F1F1;
   background: #2a2a2e;
 }
-
-.form-control, .form-select {
-  border-width: 0 0 1px 0;
+[data-bs-theme=dark] .ss-main.ss-disabled {
+  background: #3d3d43;
+}
+[data-bs-theme=dark] .ss-main.ss-disabled:focus {
+  border-bottom-color: #3d3d43;
 }
