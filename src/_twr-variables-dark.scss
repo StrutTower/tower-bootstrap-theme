@@ -18,5 +18,10 @@ $form-invalid-color-dark: #ea868f !default;
 $form-invalid-border-color-dark: #ea868f !default;
 
 
-$input-border-color-dark: lighten($body-bg-dark, 10);
-$input-bg-dark: lighten($body-bg-dark, 3);
+$input-border-color-dark: lighten($body-bg-dark, 10) !default;
+$input-bg-dark: lighten($body-bg-dark, 3) !default;
+
+
+$carousel-dark-caption-color: #fff !default;
+$carousel-dark-indicator-active-bg: #fff !default;
+$carousel-dark-control-icon-filter: none !default;

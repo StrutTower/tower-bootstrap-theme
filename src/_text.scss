@@ -1,0 +1,35 @@
+///<reference path="../node_modules/bootstrap/scss/variables.scss" />
+
+.text-warning {
+    color: darken($warning, 25) !important;
+}
+
+.text-success {
+    color: darken($success, 5) !important;
+}
+
+[data-bs-theme="dark"] {
+    .text-primary {
+        color: lighten(#0068d8, 10) !important;
+    }
+
+    .text-secondary {
+        color: lighten($secondary, 20) !important;
+    }
+
+    .text-info {
+        color:lighten($info, 5) !important;
+    }
+
+    .text-warning {
+        color: var(--bs-warning) !important;
+    }
+
+    .text-success {
+        color: var(--bs-success) !important;
+    }
+
+    .text-dark {
+        color: var(--bs-black) !important;
+    }
+}

@@ -18,6 +18,8 @@ $gray-100: lighten($gray-200, 10) !default;
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 @import "_darkThemeOverrides.scss";
+@import "_text.scss";
+@import "_tables.scss";
 @import "_forms.scss";
 @import "_fieldset.scss";
 @import "_alerts.scss";
