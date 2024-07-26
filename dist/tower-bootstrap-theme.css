@@ -12114,13 +12114,6 @@ label.form-check-label {
 }
 
 /* form-select fixes */
-.form-select {
-  -moz-padding-start: 0.4rem;
-}
-.form-select optgroup {
-  -moz-appearance: none;
-  background: #d5d5d5;
-}
 .form-select[multiple] option:checked {
   background: #004fa5;
   color: #fff;

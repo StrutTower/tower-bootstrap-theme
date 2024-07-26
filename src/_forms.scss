@@ -82,13 +82,6 @@ label.form-check-label {
 
 /* form-select fixes */
 .form-select {
-    -moz-padding-start: $input-padding-x;
-
-    optgroup {
-        -moz-appearance: none;
-        background: darken($input-bg,5);
-    }
-
     &[multiple] {
         option:checked {
             background: darken($primary, 10);
