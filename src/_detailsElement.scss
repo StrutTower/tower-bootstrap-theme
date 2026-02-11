@@ -1,0 +1,44 @@
+﻿///<reference path="../node_modules/bootstrap/scss/variables.scss" />
+
+details {
+    border: 1px $border-color solid;
+    border-radius: $border-radius;
+    padding: 0.5em 1em 0;
+    margin-bottom: .2em;
+
+    summary {
+        margin: -0.5em -1em 0;
+        padding: 0.5em;
+
+        &::marker {
+            color: $primary-text-emphasis;
+        }
+    }
+
+    &[open] {
+        padding: 0.5em 1em;
+
+        summary {
+            color: $primary-text-emphasis;
+            background: $primary-bg-subtle;
+            border-bottom: 1px solid $border-color;
+            margin-bottom: 0.5em;
+        }
+    }
+}
+
+[data-bs-theme="dark"] {
+    details {
+        border-color: $border-color-dark;
+
+        summary::marker {
+            color: $primary-text-emphasis-dark;
+        }
+
+        &[open] summary {
+            color: $primary-text-emphasis-dark;
+            background: $primary-bg-subtle-dark;
+            border-bottom-color: $border-color-dark;
+        }
+    }
+}

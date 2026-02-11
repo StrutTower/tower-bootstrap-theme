@@ -10,23 +10,27 @@
 
 [data-bs-theme="dark"] {
     .text-primary {
-        color: lighten(#0068d8, 10) !important;
+        color: lighten($primary, 17) !important;
     }
 
     .text-secondary {
-        color: lighten($secondary, 20) !important;
-    }
-
-    .text-info {
-        color:lighten($info, 5) !important;
-    }
-
-    .text-warning {
-        color: var(--bs-warning) !important;
+        color: lighten($secondary, 25) !important;
     }
 
     .text-success {
-        color: var(--bs-success) !important;
+        color: lighten($success, 10) !important;
+    }
+
+    .text-info {
+        color: lighten($info, 10) !important;
+    }
+
+    .text-warning {
+        color: $warning !important;
+    }
+
+    .text-danger {
+        color: lighten($danger, 18) !important;
     }
 
     .text-dark {

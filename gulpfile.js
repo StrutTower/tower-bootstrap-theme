@@ -12,23 +12,29 @@ var options = {
         sassMainFile: 'src/tower-bootstrap-theme.scss',
         output: 'tower-bootstrap-theme.css',
         sassFiles: 'src/**/*.scss',
-        dest: 'dist'
+        dest: 'dist',
+        docs: 'docs/css'
     },
     html: {
-        files: 'demo-templates/*.html',
-        watchFiles: 'demo-templates/**/*.html',
-        dest: 'demo'
+        files: 'docs-templates/*.html',
+        watchFiles: 'docs-templates/**/*.html',
+        dest: 'docs'
     }
 };
 
 gulp.task('build-css', function () {
     return gulp.src(options.css.sassMainFile)
-        .pipe(sass({ errLogToConsole: true }).on('error', sass.logError))
+        .pipe(sass({
+            errLogToConsole: true,
+            quietDeps: true,
+            silenceDeprecations: ['legacy-js-api', 'color-functions', 'global-builtin', 'import']
+        }).on('error', sass.logError))
         .pipe(concat(options.css.output))
         .pipe(gulp.dest(options.css.dest))
         .pipe(cleancss())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(options.css.dest));
+        .pipe(gulp.dest(options.css.dest))
+        .pipe(gulp.dest(options.css.docs));
 });
 
 gulp.task('build-html', function () {

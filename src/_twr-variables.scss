@@ -3,6 +3,9 @@
 $body-color: #212529 !default;
 $body-bg: #eee !default;
 
+$body-color-dark: #F1F1F1 !default;
+$body-bg-dark: #2A2A2E !default;
+
 $primary: #0068d8 !default;
 $success: #198754 !default;
 $info: #017878 !default;
@@ -11,6 +14,12 @@ $danger: #D12335 !default;
 $light: darken($body-bg, 20) !default;
 
 $code-color: darken(#d63384, 5) !default;
+
+
+$link-color-dark: #1497ee !default;
+$link-hover-color-dark: darken($link-color-dark, 10) !default;
+
+$body-secondary-bg-dark: lighten($body-bg-dark, 10) !default;
 
 /* border radius */
 $border-radius: 2px !default;
@@ -42,6 +51,8 @@ $input-border-color: darken($body-bg, 15) !default;
 $input-focus-border-color: $primary !default;
 $input-placeholder-color: #888 !default;
 
+$input-border-color-dark: lighten($body-bg-dark, 10) !default;
+$input-bg-dark: lighten($body-bg-dark, 3) !default;
 
 $input-border-radius: 2px 2px 0 0 !default;
 $input-border-radius-sm: 2px 2px 0 0 !default;
@@ -50,6 +61,12 @@ $input-border-radius-lg: 3px 3px 0 0 !default;
 $input-disabled-bg: lighten($input-bg, 4);
 
 $form-select-indicator-padding: 2rem !default;
+$form-feedback-valid-color: darken($success, 4) !default;
+
+$form-switch-color-dark: lighten($body-secondary-bg-dark, 10) !default;
+
+$form-invalid-color-dark: #ea868f !default;
+$form-invalid-border-color-dark: #ea868f !default;
 
 $focus-ring-width: 0 !default;
 
@@ -60,8 +77,16 @@ $form-range-thumb-focus-box-shadow: 0 0 0 1px darken($primary, 5) !default; // n
 $btn-box-shadow: none !default;
 
 /* floating label */
+$form-floating-label-opacity: 1 !default;
 $form-floating-label-transform: scale(.85) translateY(-.8rem) translateX(.15rem) !default;
 
 
 /* tables */
 $table-striped-bg-factor: .03 !default;
+
+
+
+
+$carousel-dark-caption-color: #fff !default;
+$carousel-dark-indicator-active-bg: #fff !default;
+$carousel-dark-control-icon-filter: none !default;

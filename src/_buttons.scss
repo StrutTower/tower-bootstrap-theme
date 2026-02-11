@@ -1,0 +1,23 @@
+///<reference path="../node_modules/bootstrap/scss/variables.scss" />
+
+.btn.btn-outline-primary,
+.btn.btn-outline-secondary,
+.btn.btn-outline-success,
+.btn.btn-outline-info,
+.btn.btn-outline-danger,
+.btn.btn-outline-dark {
+    color: light-dark($body-color, $body-color-dark);
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.btn.btn-outline-warning,
+.btn.btn-outline-light {
+    color: light-dark($body-color, $body-color-dark);
+
+    &:hover {
+        color: $black;
+    }
+}

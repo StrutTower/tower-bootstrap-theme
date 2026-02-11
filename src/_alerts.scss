@@ -2,28 +2,66 @@
 ///<reference path="twr-variables-dark.scss" />
 ///<reference path="../node_modules/bootstrap/scss/variables.scss" />
 
-.alert {
-    &.alert-success a {
-        color: $success;
-    }
+[data-bs-theme="light"] {
+    .alert {
+        &.alert-primary a, &.alert-secondary a {
+            color: darken($primary, 5);
 
-    &.alert-danger a {
-        color: $danger;
-    }
+            &:hover {
+                color: darken($success, 13);
+            }
+        }
 
-    &.alert-info a {
-        color: $info;
+        &.alert-success a {
+            color: darken($success, 5);
+
+            &:hover {
+                color: darken($success, 13);
+            }
+        }
+
+        &.alert-info a {
+            color: darken($info, 3);
+
+            &:hover {
+                color: darken($info, 11);
+            }
+        }
+
+        &.alert-warning a {
+            color: darken($warning, 25);
+
+            &:hover {
+                color: darken($warning, 33);
+            }
+        }
+
+        &.alert-danger a {
+            color: darken($danger, 5);
+
+            &:hover {
+                color: darken($danger, 13);
+            }
+        }
+
+        &.alert-dark {
+            background: $gray-200;
+
+            a {
+                color: #034c9b;
+            }
+        }
     }
 }
 
 [data-bs-theme="dark"] {
     .alert {
         &.alert-success a {
-            color: darken($success, 5);
+            color: lighten($success, 10);
         }
 
         &.alert-danger a {
-            color: darken($danger, 5);
+            color: lighten($danger, 10);
         }
 
         &.alert-warning a {
@@ -31,7 +69,7 @@
         }
 
         &.alert-info a {
-            color: $info;
+            color: lighten($info, 10);
         }
     }
 }
