@@ -71,6 +71,9 @@ $form-invalid-border-color-dark: #ea868f !default;
 $focus-ring-width: 0 !default;
 
 
+$form-select-indicator-padding: $input-btn-padding-x * 4;
+
+
 $form-range-thumb-focus-box-shadow: 0 0 0 1px darken($primary, 5) !default; // none !default; //0 0 0 1px $body-bg, $input-focus-box-shadow !default;
 /*$form-range-thumb-focus-box-shadow-width: 0 !default; //$input-focus-width !default; // For focus box shadow issue in Edge*/
 /* buttons */
