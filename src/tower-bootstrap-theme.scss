@@ -16,6 +16,14 @@ $gray-100: lighten($gray-200, 10) !default;
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+:root, [data-bs-theme="light"] {
+    --bs-input-bg: #{$input-bg};
+}
+
+[data-bs-theme="dark"] {
+    --bs-input-bg: #{$input-bg-dark};
+}
+
 @import "_darkThemeOverrides.scss";
 @import "_text.scss";
 @import "_tables.scss";
