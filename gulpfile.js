@@ -2,6 +2,7 @@
 var gulp = require('gulp')
     sass = require('gulp-dart-sass')
     cleancss = require('gulp-clean-css')
+    rename = require('gulp-rename')
     fileInclude = require('gulp-file-include')
     htmlBeautify = require('gulp-html-beautify');
 

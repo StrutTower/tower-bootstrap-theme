@@ -8,11 +8,6 @@
     <meta name="description" content="Demo of custom Bootstrap theme">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.3.67/css/materialdesignicons.min.css" rel="stylesheet" />
     <link href="css/tower-bootstrap-theme.min.css" rel="stylesheet" id="theme-link" />
-    <script src="scripts/themeHandler.js" type="text/javascript"></script>
-    <script src="scripts/colorChanger.js" type="text/javascript"></script>
-</head>
-
-<body>
     <style>
         .color-selector-preview {
             background: var(--twr-preview-color);
@@ -24,7 +19,12 @@
             transform: translateY(2px);
         }
     </style>
+    <script src="scripts/themeHandler.js" type="text/javascript"></script>
+    <script src="scripts/colorChanger.js" type="text/javascript"></script>
 
+</head>
+
+<body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a href="index.html" class="navbar-brand">Tower Bootstrap Theme</a>
@@ -37,7 +37,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
                         <button type="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-label="Color Changer">
-                            <span id="current-color-theme"></span> <span class="d-lg-none">Switch Color Themes</span>
+                            <span id="current-color-theme"></span> Primary Color</span>
                         </button>
                         <div class="dropdown-menu dropdown-menu-end">
                             <button type="button" class="dropdown-item" data-color-theme-value="purple">
@@ -59,7 +59,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <button type="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-label="Theme Changer">
-                            <span id="current-theme"></span> <span class="d-lg-none">Switch Themes</span>
+                            <span id="current-theme"></span> Switch Themes
                         </button>
                         <div class="dropdown-menu dropdown-menu-end">
                             <button type="button" class="dropdown-item" data-bs-theme-value="light"><span class="mdi mdi-weather-sunny"></span> Light</button>
@@ -69,7 +69,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="https://github.com/StrutTower/tower-bootstrap-theme" rel="noreferrer noopener" class="nav-link">
-                            GitHub
+                            <span class="mdi mdi-github"></span> GitHub
                         </a>
                     </li>
                 </ul>
@@ -107,13 +107,13 @@
                         <label for="exampleSelect1">Example select</label>
                         <select class="form-select" id="exampleSelect1">
                             <optgroup label="Group 1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
+                                <option>Value 1</option>
+                                <option>Value 2</option>
+                                <option>Value 3</option>
                             </optgroup>
                             <optgroup label="Group 2">
-                                <option>4</option>
-                                <option>5</option>
+                                <option>Value 4</option>
+                                <option>Value 5</option>
                             </optgroup>
                         </select>
                     </div>
@@ -130,11 +130,21 @@
                     <div class="mb-3">
                         <label for="exampleSelect3">Example multiple select</label>
                         <select multiple="" class="form-select" id="exampleSelect3">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            <option>Value 1</option>
+                            <option>Value 2</option>
+                            <option>Value 3</option>
+                            <option>Value 4</option>
+                            <option>Value 5</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleSelect4">Example Multiple Select with size="1"</label>
+                        <select multiple="" class="form-select" id="exampleSelect4" size="1">
+                            <option>Value 1</option>
+                            <option>Value 2</option>
+                            <option>Value 3</option>
+                            <option>Value 4</option>
+                            <option>Value 5</option>
                         </select>
                     </div>
                     <div class="mb-3">
@@ -228,6 +238,25 @@
                 <div class="mb-3">
                     <label for="customFile">Form Control File Input</label>
                     <input type="file" class="form-control" id="customFile">
+                </div>
+
+                <div class="mb-3">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" /> Checkbox 1
+                        </label>
+                    </div>
+                    <div class="form-text">Checkbox 1 help text</div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="checkbox2" />
+                        <label for="checkbox2" class="form-check-label">
+                            Checkbox 2
+                        </label>
+                    </div>
+                    <div class="form-text">Checkbox 2 help text</div>
                 </div>
             </div>
         </div>

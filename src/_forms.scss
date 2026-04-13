@@ -2,10 +2,11 @@
 ///<reference path="twr-variables-dark.scss" />
 ///<reference path="../node_modules/bootstrap/scss/variables.scss" />
 
-
+/* Setting outline for focused inputs */
 .form-control, .form-select {
-    &:focus {
+    &:focus, &:focus-within {
         outline: 1px solid $input-focus-border-color;
+        border-color: $input-focus-border-color;
     }
 
     &.is-valid:focus {
@@ -18,6 +19,7 @@
         outline-color: var(--bs-form-invalid-border-color);
     }
 }
+
 
 /* ASP.NET validation error messages */
 .field-validation-error, .validation-summary-errors {
@@ -35,16 +37,13 @@
 }
 
 
-
 /* custom label styles */
 label {
     font-size: 0.9em;
-    /*text-transform: uppercase;*/
     font-variant: small-caps;
     margin-bottom: 0;
     margin-left: 0.4em;
     opacity: 0.7;
-    /*letter-spacing: 0.5px;*/
 }
 
 label.form-check-label {
@@ -58,55 +57,58 @@ label.form-check-label {
 
 .form-floating > label {
     font-size: 1rem;
-    text-transform: none;
     margin-left: 0;
-    opacity: .7;
-}
-
-.form-floating > .form-control-plaintext ~ label::after,
-.form-floating > .form-control:focus ~ label::after,
-.form-floating > .form-control:not(:placeholder-shown) ~ label::after,
-.form-floating > .form-select ~ label::after {
-    background-color: transparent;
 }
 
 
-/* form-select mulitple fixes */
-@include color-mode(light) {
-    .form-select[multiple] {
-        option:checked {
-            background: lighten($primary, 10);
-            color: $white;
-        }
-
-        option:hover {
-            color: $white;
-            background: lighten($primary, 15);
-        }
+/* Checkbox outline for better keyboard support */
+.form-check-input {
+    &:focus-visible {
+        outline: 2px solid var(--twr-outline-color);
     }
 }
 
-@include color-mode(dark) {
-    .form-select[multiple] {
-        option:checked {
-            background: darken($primary, 10);
-            color: $white;
-        }
 
-        option:hover {
-            color: $white;
-            background: darken($primary, 15);
-        }
-    }
-
-    &:disabled {
-        background: $input-disabled-bg;
-    }
-}
-
-.form-check-label, .form-check-input,
-label.form-check, label.form-check-inline {
+/* Pointer cursor for checkbox labels */
+.form-check-label, .form-check-input, label.form-check, label.form-check-inline {
     cursor: pointer;
     display: inline-block;
     margin-bottom: 0;
+}
+
+/* Custom select styling */
+@supports (appearance:base-select) {
+    select, select::picker(select),
+    select.form-select, select.form-select::picker(select) {
+        appearance: base-select;
+    }
+
+    select::picker-icon {
+        display: none;
+    }
+
+    select.form-select::picker(select) {
+        background: var(--twr-input-bg);
+        border: 1px solid $input-focus-border-color;
+        border-radius: var(--bs-border-radius);
+        box-shadow: 0 0 4px rgba(0,0,0, 0.4), 0 0 10px rgba(0,0,0, 0.2);
+    }
+
+    .form-select option {
+        --twr-select-option-checked-bg: #{"hsl(from var(--bs-primary) h s l / 20%)"};
+
+        &:checked {
+            background: var(--twr-select-option-checked-bg);
+        }
+    }
+
+    .form-select[size="1"] option::checkmark {
+        transform: translateY(-.25em);
+    }
+
+    @include color-mode(dark) {
+        .form-select option {
+            --twr-select-option-checked-bg: #{"hsl(from var(--bs-primary) h s l / 50%)"};
+        }
+    }
 }

@@ -11900,7 +11900,12 @@ textarea.form-control-lg {
   }
 }
 :root {
-  --bs-input-bg: hsl(from var(--bs-body-bg) h s calc(l + 4));
+  --twr-input-bg: hsl(from var(--bs-body-bg) h s calc(l + 4));
+  --twr-outline-color: black;
+}
+
+[data-bs-theme=dark] {
+  --twr-outline-color: white;
 }
 
 [data-bs-theme=dark] {
@@ -12078,8 +12083,10 @@ a:hover {
   --bs-table-hover-color: #fff;
 }
 
-.form-control:focus, .form-select:focus {
+/* Setting outline for focused inputs */
+.form-control:focus, .form-control:focus-within, .form-select:focus, .form-select:focus-within {
   outline: 1px solid #7540bf;
+  border-color: #7540bf;
 }
 .form-control.is-valid:focus, .form-select.is-valid:focus {
   border-color: var(--bs-form-valid-border-color);
@@ -12107,12 +12114,10 @@ a:hover {
 /* custom label styles */
 label {
   font-size: 0.9em;
-  /*text-transform: uppercase;*/
   font-variant: small-caps;
   margin-bottom: 0;
   margin-left: 0.4em;
   opacity: 0.7;
-  /*letter-spacing: 0.5px;*/
 }
 
 label.form-check-label {
@@ -12126,47 +12131,49 @@ label.form-check-label {
 
 .form-floating > label {
   font-size: 1rem;
-  text-transform: none;
   margin-left: 0;
-  opacity: 0.7;
 }
 
-.form-floating > .form-control-plaintext ~ label::after,
-.form-floating > .form-control:focus ~ label::after,
-.form-floating > .form-control:not(:placeholder-shown) ~ label::after,
-.form-floating > .form-select ~ label::after {
-  background-color: transparent;
+/* Checkbox outline for better keyboard support */
+.form-check-input:focus-visible {
+  outline: 2px solid var(--twr-outline-color);
 }
 
-/* form-select mulitple fixes */
-[data-bs-theme=light] .form-select[multiple] option:checked {
-  background: #9166cc;
-  color: #fff;
-}
-[data-bs-theme=light] .form-select[multiple] option:hover {
-  color: #fff;
-  background: #9e79d2;
-}
-
-[data-bs-theme=dark] .form-select[multiple] option:checked {
-  background: #5e3399;
-  color: #fff;
-}
-[data-bs-theme=dark] .form-select[multiple] option:hover {
-  color: #fff;
-  background: #522d86;
-}
-[data-bs-theme=dark]:disabled {
-  background: var(--bs-secondary-bg);
-}
-
-.form-check-label, .form-check-input,
-label.form-check, label.form-check-inline {
+/* Pointer cursor for checkbox labels */
+.form-check-label, .form-check-input, label.form-check, label.form-check-inline {
   cursor: pointer;
   display: inline-block;
   margin-bottom: 0;
 }
 
+/* Custom select styling */
+@supports (appearance: base-select) {
+  select, select::picker(select),
+  select.form-select, select.form-select::picker(select) {
+    appearance: base-select;
+  }
+  select::picker-icon {
+    display: none;
+  }
+  select.form-select::picker(select) {
+    background: var(--twr-input-bg);
+    border: 1px solid #7540bf;
+    border-radius: var(--bs-border-radius);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .form-select option {
+    --twr-select-option-checked-bg: hsl(from var(--bs-primary) h s l / 20%);
+  }
+  .form-select option:checked {
+    background: var(--twr-select-option-checked-bg);
+  }
+  .form-select[size="1"] option::checkmark {
+    transform: translateY(-0.25em);
+  }
+  [data-bs-theme=dark] .form-select option {
+    --twr-select-option-checked-bg: hsl(from var(--bs-primary) h s l / 50%);
+  }
+}
 fieldset {
   border: 1px solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
@@ -12253,9 +12260,13 @@ fieldset legend {
   color: #000;
 }
 
+.btn:focus-visible {
+  outline: 2px solid var(--twr-outline-color);
+}
+
 details {
-  border: 1px #a8a8af solid;
-  border-radius: 0.375rem;
+  border: 1px var(--bs-border-color) solid;
+  border-radius: var(--bs-border-radius);
   padding: 0.5em 1em 0;
   margin-bottom: 0.2em;
 }
@@ -12264,28 +12275,16 @@ details summary {
   padding: 0.5em;
 }
 details summary::marker {
-  color: #2f1a4c;
+  color: var(--bs-primary-text-emphasis);
 }
 details[open] {
   padding: 0.5em 1em;
 }
 details[open] summary {
-  color: #2f1a4c;
-  background: #e3d9f2;
-  border-bottom: 1px solid #a8a8af;
+  color: var(--bs-primary-text-emphasis);
+  background: var(--bs-primary-bg-subtle);
+  border-bottom: 1px solid var(--bs-border-color);
   margin-bottom: 0.5em;
-}
-
-[data-bs-theme=dark] details {
-  border-color: #424249;
-}
-[data-bs-theme=dark] details summary::marker {
-  color: #ac8cd9;
-}
-[data-bs-theme=dark] details[open] summary {
-  color: #ac8cd9;
-  background: #170d26;
-  border-bottom-color: #424249;
 }
 
 .modal {

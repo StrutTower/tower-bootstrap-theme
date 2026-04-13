@@ -21,3 +21,8 @@
         color: $black;
     }
 }
+
+
+.btn:focus-visible {
+    outline: 2px solid var(--twr-outline-color);
+}

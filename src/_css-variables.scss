@@ -1,5 +1,11 @@
 ///<reference path="../node_modules/bootstrap/scss/variables.scss" />
 
 :root {
-    --bs-input-bg: #{$input-bg};
+    --twr-input-bg: #{$input-bg};
+    --twr-outline-color: black;
+}
+
+
+@include color-mode(dark) {
+    --twr-outline-color: white;
 }

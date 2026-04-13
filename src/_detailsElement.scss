@@ -1,8 +1,8 @@
 ﻿///<reference path="../node_modules/bootstrap/scss/variables.scss" />
 
 details {
-    border: 1px $border-color solid;
-    border-radius: $border-radius;
+    border: 1px var(--bs-border-color) solid;
+    border-radius: var(--bs-border-radius);
     padding: 0.5em 1em 0;
     margin-bottom: .2em;
 
@@ -11,7 +11,7 @@ details {
         padding: 0.5em;
 
         &::marker {
-            color: $primary-text-emphasis;
+            color: var(--bs-primary-text-emphasis);
         }
     }
 
@@ -19,26 +19,10 @@ details {
         padding: 0.5em 1em;
 
         summary {
-            color: $primary-text-emphasis;
-            background: $primary-bg-subtle;
-            border-bottom: 1px solid $border-color;
+            color: var(--bs-primary-text-emphasis);
+            background: var(--bs-primary-bg-subtle);
+            border-bottom: 1px solid var(--bs-border-color);
             margin-bottom: 0.5em;
-        }
-    }
-}
-
-@include color-mode(dark) {
-    details {
-        border-color: $border-color-dark;
-
-        summary::marker {
-            color: $primary-text-emphasis-dark;
-        }
-
-        &[open] summary {
-            color: $primary-text-emphasis-dark;
-            background: $primary-bg-subtle-dark;
-            border-bottom-color: $border-color-dark;
         }
     }
 }

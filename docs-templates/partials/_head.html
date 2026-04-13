@@ -4,5 +4,16 @@
 <meta name="description" content="Demo of custom Bootstrap theme">
 <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.3.67/css/materialdesignicons.min.css" rel="stylesheet" />
 <link href="css/tower-bootstrap-theme.min.css" rel="stylesheet" id="theme-link" />
+<style>
+    .color-selector-preview {
+        background: var(--twr-preview-color);
+        display: inline-block;
+        height: 1.25em;
+        width: 1.25em;
+        border-radius: .25em;
+        border: 2px solid hsl(from var(--twr-preview-color) h s calc(l - 10));
+        transform: translateY(2px);
+    }
+</style>
 <script src="scripts/themeHandler.js" type="text/javascript"></script>
 <script src="scripts/colorChanger.js" type="text/javascript"></script>
