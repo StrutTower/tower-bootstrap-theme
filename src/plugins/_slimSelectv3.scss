@@ -10,20 +10,24 @@
     --ss-placeholder-color: var(--bs-secondary-color);
     --ss-disabled-color: var(--bs-secondary-color);
     --ss-border-color: var(--bs-border-color);
+    --ss-border-radius: var(--bs-border-radius);
     --ss-highlight-color: var(--bs-primary);
     --ss-main-height: 25.5px;
 }
 
 .ss-main {
-    border-top: 0;
+    --ss-bg-color: #{$input-bg};
+    /* border-top: 0;
     border-left: 0;
-    border-right: 0;
+    border-right: 0;*/
     padding-top: 0;
     padding-bottom: 0;
+    /* border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;*/
 
-    &:focus {
+    &:focus, &[aria-expanded="true"] {
         box-shadow: none;
-        border-bottom-color: var(--bs-primary);
+        border-color: var(--bs-primary);
     }
 
     .ss-values .ss-value {
@@ -52,14 +56,6 @@
     color: white;
 }
 
-@include color-mode(light) {
-    .ss-main {
-        --ss-bg-color: #{$input-bg};
-    }
-}
-
-@include color-mode(dark) {
-    .ss-main {
-        --ss-bg-color: #{$input-bg-dark};
-    }
+.ss-content.ss-dir-below.ss-open {
+    border-top-color: var(--bs-primary);
 }

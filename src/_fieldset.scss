@@ -4,6 +4,7 @@
 
 fieldset {
   border: 1px solid $input-border-color;
+  border-radius: var(--bs-border-radius);
   padding-top: 0.4rem;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
@@ -15,13 +16,7 @@ fieldset {
     font-size: 1.1rem;
     padding-left: 0.3rem;
     padding-right: 0.3rem;
-    margin-left: 0.3rem;
+    margin-left: 0.1rem;
     margin-bottom: 0;
-  }
-}
-
-@include color-mode(dark) {
-  fieldset {
-    border-color: $input-border-color-dark;
   }
 }

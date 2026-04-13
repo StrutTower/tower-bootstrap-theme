@@ -2,8 +2,7 @@
 ///<reference path="../twr-variables-dark.scss" />
 ///<reference path="../../node_modules/bootstrap/scss/variables.scss" />
 
-:root,
-[data-bs-theme=light] {
+@include color-mode(light) {
     --ss-primary-color: #{$primary};
     --ss-bg-color: #{$input-bg};
     --ss-font-color: #{$input-color};
@@ -85,7 +84,7 @@ select.slim-select-basic {
     opacity: 0;
 }
 
-[data-bs-theme=dark] {
+@include color-mode(dark) {
     --ss-bg-color: #{$input-bg-dark};
     --ss-border-color: #{$input-border-color-dark};
 

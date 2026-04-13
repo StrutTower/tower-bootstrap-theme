@@ -2,15 +2,12 @@
 var gulp = require('gulp')
     sass = require('gulp-dart-sass')
     cleancss = require('gulp-clean-css')
-    concat = require('gulp-concat')
-    rename = require('gulp-rename')
     fileInclude = require('gulp-file-include')
     htmlBeautify = require('gulp-html-beautify');
 
 var options = {
     css: {
-        sassMainFile: 'src/tower-bootstrap-theme.scss',
-        output: 'tower-bootstrap-theme.css',
+        primaryFiles: 'src/themes/**/*.scss',
         sassFiles: 'src/**/*.scss',
         dest: 'dist',
         docs: 'docs/css'
@@ -23,13 +20,12 @@ var options = {
 };
 
 gulp.task('build-css', function () {
-    return gulp.src(options.css.sassMainFile)
+    return gulp.src(options.css.primaryFiles)
         .pipe(sass({
             errLogToConsole: true,
             quietDeps: true,
             silenceDeprecations: ['legacy-js-api', 'color-functions', 'global-builtin', 'import']
         }).on('error', sass.logError))
-        .pipe(concat(options.css.output))
         .pipe(gulp.dest(options.css.dest))
         .pipe(cleancss())
         .pipe(rename({ suffix: '.min' }))
@@ -52,4 +48,4 @@ gulp.task('watch-html', function () {
     return gulp.watch(options.html.watchFiles, gulp.parallel(['build-html']));
 })
 
-gulp.task('default', gulp.parallel(['build-css']));
+gulp.task('default', gulp.parallel(['build-css', 'build-html']));

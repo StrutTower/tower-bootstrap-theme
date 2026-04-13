@@ -1,5 +1,15 @@
 ///<reference path="../node_modules/bootstrap/scss/variables.scss" />
 
+a {
+    --bs-text-decoration-color-rgb: var(--bs-link-color-rgb);
+    --bs-text-decoration-color: #{rgb(var(--bs-link-color-rgb))};
+    text-decoration-color: #{"hsl(from var(--bs-text-decoration-color) h s l / 50%)"};
+
+    &:hover {
+        text-decoration-color: #{"hsl(from var(--bs-text-decoration-color) h s l / 100%)"};
+    }
+}
+
 .text-warning {
     color: darken($warning, 25) !important;
 }
@@ -8,7 +18,7 @@
     color: darken($success, 5) !important;
 }
 
-[data-bs-theme="dark"] {
+@include color-mode(dark) {
     .text-primary {
         color: lighten($primary, 17) !important;
     }

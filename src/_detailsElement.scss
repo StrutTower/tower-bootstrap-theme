@@ -27,7 +27,7 @@ details {
     }
 }
 
-[data-bs-theme="dark"] {
+@include color-mode(dark) {
     details {
         border-color: $border-color-dark;
 

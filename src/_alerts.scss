@@ -2,74 +2,52 @@
 ///<reference path="twr-variables-dark.scss" />
 ///<reference path="../node_modules/bootstrap/scss/variables.scss" />
 
-[data-bs-theme="light"] {
-    .alert {
-        &.alert-primary a, &.alert-secondary a {
-            color: darken($primary, 5);
 
-            &:hover {
-                color: darken($success, 13);
-            }
-        }
+.alert-success, .text-success {
+    --bs-link-color-rgb: #{toRgb($success)};
+    --bs-link-hover-color-rgb: #{toRgb(darken($success,10))};
+}
 
-        &.alert-success a {
-            color: darken($success, 5);
+.alert-danger, .text-danger {
+    --bs-link-color-rgb: #{toRgb($danger)};
+    --bs-link-hover-color-rgb: #{toRgb(darken($danger,10))};
+}
 
-            &:hover {
-                color: darken($success, 13);
-            }
-        }
+.alert-warning, .text-warning {
+    --bs-link-color-rgb: #{toRgb(darken($warning, 20))};
+    --bs-link-hover-color-rgb: #{toRgb(darken($warning,30))};
+}
 
-        &.alert-info a {
-            color: darken($info, 3);
+.alert-info, .text-info {
+    --bs-link-color-rgb: #{toRgb($info)};
+    --bs-link-hover-color-rgb: #{toRgb(darken($info, 10))};
+}
 
-            &:hover {
-                color: darken($info, 11);
-            }
-        }
-
-        &.alert-warning a {
-            color: darken($warning, 25);
-
-            &:hover {
-                color: darken($warning, 33);
-            }
-        }
-
-        &.alert-danger a {
-            color: darken($danger, 5);
-
-            &:hover {
-                color: darken($danger, 13);
-            }
-        }
-
-        &.alert-dark {
-            background: $gray-200;
-
-            a {
-                color: #034c9b;
-            }
-        }
+@include color-mode(light) {
+    .alert-dark, .text-dark {
+        --bs-link-color-rgb: #{toRgb(darken($link-color, 10))};
+        --bs-link-hover-color-rgb: #{toRgb(darken($link-color, 20))};
     }
 }
 
-[data-bs-theme="dark"] {
-    .alert {
-        &.alert-success a {
-            color: lighten($success, 10);
-        }
+@include color-mode(dark) {
+    .alert-success, .text-success {
+        --bs-link-color-rgb: #{toRgb(lighten($success,10))};
+        --bs-link-hover-color-rgb: #{toRgb(lighten($success,20))};
+    }
 
-        &.alert-danger a {
-            color: lighten($danger, 10);
-        }
+    .alert-danger, .text-danger {
+        --bs-link-color-rgb: #{toRgb(lighten($danger,10))};
+        --bs-link-hover-color-rgb: #{toRgb(lighten($danger,20))};
+    }
 
-        &.alert-warning a {
-            color: darken($warning, 5);
-        }
+    .alert-warning, .text-warning {
+        --bs-link-color-rgb: #{toRgb($warning)};
+        --bs-link-hover-color-rgb: #{toRgb(lighten($warning,20))};
+    }
 
-        &.alert-info a {
-            color: lighten($info, 10);
-        }
+    .alert-info, .text-info {
+        --bs-link-color-rgb: #{toRgb(lighten($info,10))};
+        --bs-link-hover-color-rgb: #{toRgb(lighten($info, 20))};
     }
 }

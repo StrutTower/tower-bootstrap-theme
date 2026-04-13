@@ -2,28 +2,22 @@
 ///<reference path="twr-variables-dark.scss" />
 ///<reference path="../node_modules/bootstrap/scss/variables.scss" />
 
+
 .form-control, .form-select {
-    border-width: 0 0 1px 0;
-}
+    &:focus {
+        outline: 1px solid $input-focus-border-color;
+    }
 
-/* input group border fix */
-.input-group > .form-control, .input-group > .form-select {
-    border-right: 1px solid var(--bs-border-color);
-    border-left: 1px solid var(--bs-border-color);
+    &.is-valid:focus {
+        border-color: var(--bs-form-valid-border-color);
+        outline-color: var(--bs-form-valid-border-color);
+    }
 
-    &:first-child, &:last-child {
-        border-left: 0;
+    &.is-invalid:focus {
+        border-color: var(--bs-form-invalid-border-color);
+        outline-color: var(--bs-form-invalid-border-color);
     }
 }
-
-.form-control.input-validation-error {
-    &:focus:not(:read-only) {
-        border-bottom-color: var(--bs-form-invalid-color);
-        box-shadow: none;
-    }
-}
-
-
 
 /* ASP.NET validation error messages */
 .field-validation-error, .validation-summary-errors {
@@ -33,33 +27,30 @@
 /* jQuery validation input validation error */
 .form-control.input-validation-error, .form-select.input-validation-error {
     border-color: var(--bs-form-invalid-color);
+
+    &:focus {
+        border-color: var(--bs-form-invalid-color);
+        outline: 1px solid var(--bs-form-invalid-color);
+    }
 }
 
-/* input type=color fixes */
-input[type="color"].form-control {
-    padding: .3rem .5rem
-}
 
-input[type="color"]:not(.form-control) {
-    padding: 0;
-    border: none;
-    display: block;
-    height: 1.8rem;
-}
 
 /* custom label styles */
 label {
-    font-size: 0.7em;
-    text-transform: uppercase;
+    font-size: 0.9em;
+    /*text-transform: uppercase;*/
+    font-variant: small-caps;
     margin-bottom: 0;
     margin-left: 0.4em;
     opacity: 0.7;
-    letter-spacing:0.5px;
+    /*letter-spacing: 0.5px;*/
 }
 
 label.form-check-label {
     font-size: 1rem;
     text-transform: none;
+    font-variant: normal;
     margin-left: 0;
     opacity: 1;
     letter-spacing: unset;
@@ -80,9 +71,23 @@ label.form-check-label {
 }
 
 
-/* form-select fixes */
-.form-select {
-    &[multiple] {
+/* form-select mulitple fixes */
+@include color-mode(light) {
+    .form-select[multiple] {
+        option:checked {
+            background: lighten($primary, 10);
+            color: $white;
+        }
+
+        option:hover {
+            color: $white;
+            background: lighten($primary, 15);
+        }
+    }
+}
+
+@include color-mode(dark) {
+    .form-select[multiple] {
         option:checked {
             background: darken($primary, 10);
             color: $white;
@@ -104,37 +109,4 @@ label.form-check, label.form-check-inline {
     cursor: pointer;
     display: inline-block;
     margin-bottom: 0;
-}
-
-.form-help-text {
-    opacity: 0.7;
-    padding-left: 10px;
-    font-size: 0.8rem;
-}
-
-.form-check ~ .form-help-text {
-    transform: translateY(-7px);
-    padding-left: 25px;
-}
-
-.form-control::file-selector-button {
-    border-top: 1px $input-border-color solid;
-    border-left: 1px $input-border-color solid;
-    border-right: 1px $input-border-color solid;
-    border-top-left-radius: $border-radius;
-}
-
-.form-control, .form-select {
-    &:disabled, &[readonly] {
-        color: lighten($body-color, 40);
-        background-color: lighten($input-bg, 4);
-
-        &::placeholder {
-            color: lighten($body-color, 40);
-        }
-    }
-
-    &:focus[readonly] {
-        border-color: darken($input-border-color, 15);
-    }
 }

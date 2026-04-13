@@ -1,32 +1,37 @@
 ﻿///<reference path="../node_modules/bootstrap/scss/variables.scss" />
 
+$enable-shadows: true;
+
+$gray-800: #2A2A2E !default;
+$gray-900: darken($gray-800, 4) !default;
+$gray-700: lighten($gray-800, 10) !default;
+$gray-600: lighten($gray-700, 10) !default;
+$gray-500: lighten($gray-600, 10) !default;
+$gray-400: lighten($gray-500, 10) !default;
+$gray-300: lighten($gray-400, 10) !default;
+$gray-200: lighten($gray-300, 10) !default;
+$gray-100: lighten($gray-200, 10) !default;
+
 $body-color: #212529 !default;
 $body-bg: #eee !default;
 
 $body-color-dark: #F1F1F1 !default;
-$body-bg-dark: #2A2A2E !default;
+$body-bg-dark: darken(#282A31, 2.5) !default;
 
-$primary: #0068d8 !default;
-$success: #198754 !default;
-$info: #017878 !default;
-$warning: #ffc107 !default;
-$danger: #D12335 !default;
+$body-tertiary-bg-dark: $gray-800 !default;
+
+
 $light: darken($body-bg, 20) !default;
 
-$code-color: darken(#d63384, 5) !default;
+$code-color: #c72877 !default;
 
+$link-color: $primary !default;
+$link-color-rgb: toRgb($primary) !default;
 
-$link-color-dark: #1497ee !default;
-$link-hover-color-dark: darken($link-color-dark, 10) !default;
 
 $body-secondary-bg-dark: lighten($body-bg-dark, 10) !default;
 
-/* border radius */
-$border-radius: 2px !default;
-$border-radius-sm: 2px !default;
-$border-radius-lg: 3px !default;
-$border-radius-xl: 3px 0 0 !default;
-$border-radius-xxl: 4px !default;
+
 
 /* nav */
 $nav-link-padding-y: .2rem !default;
@@ -36,7 +41,7 @@ $navbar-toggler-font-size: 1rem !default;
 $navbar-light-toggler-border-color: transparent !default;
 $navbar-dark-toggler-border-color: transparent !default;
 
-/* input */
+/* inputs */
 $input-btn-padding-y: .125rem !default;
 $input-btn-padding-x: .4rem !default;
 
@@ -46,22 +51,13 @@ $input-btn-padding-x-sm: .25rem !default;
 $input-btn-padding-y-lg: .25rem !default;
 $input-btn-padding-x-lg: 0.5rem !default;
 
-$input-bg: darken($body-bg, 5) !default;
-$input-border-color: darken($body-bg, 15) !default;
+$input-bg: #{"hsl(from var(--bs-body-bg) h s calc(l + 4))"} !default;
 $input-focus-border-color: $primary !default;
 $input-placeholder-color: #888 !default;
 
-$input-border-color-dark: lighten($body-bg-dark, 10) !default;
-$input-bg-dark: lighten($body-bg-dark, 3) !default;
-
-$input-border-radius: 2px 2px 0 0 !default;
-$input-border-radius-sm: 2px 2px 0 0 !default;
-$input-border-radius-lg: 3px 3px 0 0 !default;
-
-$input-disabled-bg: lighten($input-bg, 4);
 
 $form-select-indicator-padding: 2rem !default;
-$form-feedback-valid-color: darken($success, 4) !default;
+
 
 $form-switch-color-dark: lighten($body-secondary-bg-dark, 10) !default;
 
@@ -74,13 +70,11 @@ $focus-ring-width: 0 !default;
 $form-select-indicator-padding: $input-btn-padding-x * 4;
 
 
-$form-range-thumb-focus-box-shadow: 0 0 0 1px darken($primary, 5) !default; // none !default; //0 0 0 1px $body-bg, $input-focus-box-shadow !default;
-/*$form-range-thumb-focus-box-shadow-width: 0 !default; //$input-focus-width !default; // For focus box shadow issue in Edge*/
 /* buttons */
 $btn-box-shadow: none !default;
 
 /* floating label */
-$form-floating-label-opacity: 1 !default;
+$form-floating-label-opacity: 0.6 !default;
 $form-floating-label-transform: scale(.85) translateY(-.8rem) translateX(.15rem) !default;
 
 
@@ -89,7 +83,7 @@ $table-striped-bg-factor: .03 !default;
 
 
 
-
+/* carousel */
 $carousel-dark-caption-color: #fff !default;
 $carousel-dark-indicator-active-bg: #fff !default;
 $carousel-dark-control-icon-filter: none !default;

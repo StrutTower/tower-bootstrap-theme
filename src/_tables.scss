@@ -1,6 +1,6 @@
 ///<reference path="../node_modules/bootstrap/scss/variables.scss" />
 
-[data-bs-theme="dark"] {
+@include color-mode(dark) {
     .table-primary {
         --bs-table-color: var(--bs-primary-text-emphasis);
         --bs-table-bg: var(--bs-primary-bg-subtle);

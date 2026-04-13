@@ -3,6 +3,7 @@
 ///<reference path="../node_modules/bootstrap/scss/variables.scss" />
 
 @include color-mode(dark) {
+
     strong, .font-weight-bold {
         color: white;
     }
@@ -12,7 +13,14 @@
         background-color: black;
     }
 
-    .form-control, .form-select {
+    .form-check-input:not(:checked, :focus) {
+        border-color: #{"hsl(from var(--bs-border-color) h s calc(l + 10))"};
+
+        &:focus {
+            border-color: $input-focus-border-color;
+        }
+    }
+    /* .form-control, .form-select {
         background-color: $input-bg-dark;
         border-color: $input-border-color-dark;
 
@@ -49,21 +57,20 @@
 
     .input-group-text {
         border-color: $input-border-color-dark;
-    }
-
+    }*/
     .form-check-input {
-        border-color: lighten($input-border-color-dark, 3);
-        background-color: $input-bg-dark;
+        /*border-color: lighten($input-border-color-dark, 1);*/
+        /*background-color: $input-bg;*/
 
         &:checked {
-            background-color: $primary;
+            /*background-color: $primary;*/
         }
     }
-
+    /*
     .form-control::file-selector-button {
         border-color: $input-border-color-dark;
     }
-
+*/
     .blockquote-footer {
         color: $text-muted;
     }
