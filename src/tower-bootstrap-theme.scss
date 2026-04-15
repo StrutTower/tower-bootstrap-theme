@@ -5,8 +5,6 @@
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-
-
 @import "_css-variables.scss";
 @import "_darkThemeOverrides.scss";
 @import "_text.scss";
@@ -18,3 +16,6 @@
 @import "_detailsElement.scss";
 @import "_modal.scss";
 @import "plugins/_allPlugins.scss";
+
+@import "themes/_themeMixins.scss";
+@import "_themes.scss";

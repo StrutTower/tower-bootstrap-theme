@@ -10,9 +10,9 @@ function updateColorTheme(theme) {
     }
     //document.documentElement.setAttribute('data-color-theme', theme);
     if (theme == null || theme == 'default') {
-        document.getElementById('theme-link').href = 'css/tower-bootstrap-theme.min.css';
+        document.querySelector('html').dataset.twrTheme = null;
     } else {
-        document.getElementById('theme-link').href = 'css/tower-bootstrap-theme-' + theme + '.min.css';
+        document.querySelector('html').dataset.twrTheme = theme;
     }
 }
 

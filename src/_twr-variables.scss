@@ -1,9 +1,9 @@
 ﻿///<reference path="../node_modules/bootstrap/scss/variables.scss" />
 
-$enable-shadows: true;
+$enable-shadows: true !default;
 
 $gray-800: #2A2A2E !default;
-$gray-900: darken($gray-800, 4) !default;
+$gray-900: darken($gray-800, 6) !default;
 $gray-700: lighten($gray-800, 10) !default;
 $gray-600: lighten($gray-700, 10) !default;
 $gray-500: lighten($gray-600, 10) !default;
@@ -20,7 +20,9 @@ $body-bg-dark: darken(#282A31, 2.5) !default;
 
 $body-tertiary-bg-dark: $gray-800 !default;
 
-
+$primary: #0068d8 !default;
+$info: #017878 !default;
+$danger: #D12335 !default;
 $light: darken($body-bg, 20) !default;
 
 $code-color: #c72877 !default;
@@ -38,7 +40,15 @@ $nav-link-padding-y: .2rem !default;
 
 $navbar-toggler-padding-y: 0 !default;
 $navbar-toggler-font-size: 1rem !default;
+
+$navbar-light-color: #555 !default;
+$navbar-light-hover-color: #111 !default;
+$navbar-light-active-color: #000 !default;
 $navbar-light-toggler-border-color: transparent !default;
+
+$navbar-dark-color: #ddd !default;
+$navbar-dark-hover-color: #eee !default;
+$navbar-dark-active-color: #fff !default;
 $navbar-dark-toggler-border-color: transparent !default;
 
 /* inputs */
@@ -67,7 +77,7 @@ $form-invalid-border-color-dark: #ea868f !default;
 $focus-ring-width: 0 !default;
 
 
-$form-select-indicator-padding: $input-btn-padding-x * 4;
+$form-select-indicator-padding: $input-btn-padding-x * 4 !default;
 
 
 /* buttons */

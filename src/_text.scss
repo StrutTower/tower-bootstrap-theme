@@ -1,12 +1,15 @@
 ///<reference path="../node_modules/bootstrap/scss/variables.scss" />
 
-a {
-    --bs-text-decoration-color-rgb: var(--bs-link-color-rgb);
-    --bs-text-decoration-color: #{rgb(var(--bs-link-color-rgb))};
-    text-decoration-color: #{"hsl(from var(--bs-text-decoration-color) h s l / 50%)"};
+:root {
+    --bs-link-hover-color: #{"hsl(from var(--bs-link-color) h s calc(l - 5))"};
+    --bs-nav-link-hover-color: var(--bs-link-hover-color);
+}
+
+a, .btn-link {
+    text-decoration-color: #{"hsl(from var(--bs-link-color) h s l / 50%)"};
 
     &:hover {
-        text-decoration-color: #{"hsl(from var(--bs-text-decoration-color) h s l / 100%)"};
+        text-decoration-color: #{"hsl(from var(--bs-link-hover-color) h s l / 100%)"};
     }
 }
 
@@ -20,27 +23,27 @@ a {
 
 @include color-mode(dark) {
     .text-primary {
-        color: lighten($primary, 17) !important;
+        color: #{"hsl(from var(--bs-primary) h s calc(l + 14))"} !important;
     }
 
     .text-secondary {
-        color: lighten($secondary, 25) !important;
+        color: #{"hsl(from var(--bs-secondary) h s calc(l + 25))"} !important; //lighten($secondary, 25) !important;
     }
 
     .text-success {
-        color: lighten($success, 10) !important;
+        color: #{"hsl(from var(--bs-success) h s calc(l + 10))"} !important; //lighten($success, 10) !important;
     }
 
     .text-info {
-        color: lighten($info, 10) !important;
+        color: #{"hsl(from var(--bs-info) h s calc(l + 10))"} !important; //lighten($info, 10) !important;
     }
 
     .text-warning {
-        color: $warning !important;
+        color: var(--bs-warning) !important; //$warning !important;
     }
 
     .text-danger {
-        color: lighten($danger, 18) !important;
+        color: #{"hsl(from var(--bs-danger) h s calc(l + 17))"} !important; //lighten($danger, 18) !important;
     }
 
     .text-dark {

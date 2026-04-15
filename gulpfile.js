@@ -8,7 +8,7 @@ var gulp = require('gulp')
 
 var options = {
     css: {
-        primaryFiles: 'src/themes/**/*.scss',
+        primaryFile: 'src/tower-bootstrap-theme.scss',
         sassFiles: 'src/**/*.scss',
         dest: 'dist',
         docs: 'docs/css'
@@ -21,7 +21,7 @@ var options = {
 };
 
 gulp.task('build-css', function () {
-    return gulp.src(options.css.primaryFiles)
+    return gulp.src(options.css.primaryFile)
         .pipe(sass({
             errLogToConsole: true,
             quietDeps: true,

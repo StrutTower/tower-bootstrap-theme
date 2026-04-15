@@ -5,8 +5,8 @@
 /* Setting outline for focused inputs */
 .form-control, .form-select {
     &:focus, &:focus-within {
-        outline: 1px solid $input-focus-border-color;
-        border-color: $input-focus-border-color;
+        outline: 1px solid var(--bs-link-color); //$input-focus-border-color;
+        border-color: var(--bs-link-color); //$input-focus-border-color;
     }
 
     &.is-valid:focus {
@@ -89,7 +89,7 @@ label.form-check-label {
 
     select.form-select::picker(select) {
         background: var(--twr-input-bg);
-        border: 1px solid $input-focus-border-color;
+        border: 1px solid var(--bs-link-color); //$input-focus-border-color;
         border-radius: var(--bs-border-radius);
         box-shadow: 0 0 4px rgba(0,0,0, 0.4), 0 0 10px rgba(0,0,0, 0.2);
     }

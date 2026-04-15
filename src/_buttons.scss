@@ -1,5 +1,12 @@
 ///<reference path="../node_modules/bootstrap/scss/variables.scss" />
 
+.btn-warning {
+    --bs-btn-hover-bg: #{"hsl(from var(--bs-btn-bg) h s calc(l - 7.5))"};
+    --bs-btn-hover-border-color: #{"hsl(from var(--bs-btn-bg) h s calc(l - 7))"};
+    --bs-btn-active-bg: #{"hsl(from var(--bs-btn-bg) h s calc(l - 10))"};
+    --bs-btn-active-border-color: var(--bs-btn-hover-border-color);
+}
+
 .btn.btn-outline-primary,
 .btn.btn-outline-secondary,
 .btn.btn-outline-success,

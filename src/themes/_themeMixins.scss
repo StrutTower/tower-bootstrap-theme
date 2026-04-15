@@ -1,0 +1,96 @@
+
+@mixin twr-theme-override($themeName, $colors, $lightColors, $darkColors) {
+    /* Links */
+    [data-twr-theme="#{$themeName}"] {
+
+        @each $name, $color in $colors {
+            --bs-#{$name}: #{$color};
+            --bs-#{$name}-rgb: #{toRgb($color)};
+
+            @if $name == "primary" {
+                --bs-link-color: #{$color};
+                --bs-link-color-rgb: #{toRgb($color)};
+                --bs-link-hover-color-rgb: #{toRgb(darken($color, 5))};
+
+
+
+                .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+                    --bs-nav-pills-link-active-bg: #{$color};
+                }
+
+                .list-group-item.active {
+                    --bs-list-group-active-bg: #{$color};
+                    --bs-list-group-active-border-color: #{$color};
+                }
+
+                .form-check-input:checked {
+                    background-color: $color;
+                    border-color: $color;
+                }
+
+                .form-check-input:focus {
+                    border-color: $color;
+                }
+
+                .form-range::-moz-range-thumb {
+                    background-color: $color;
+                }
+
+                .form-range::-webkit-slider-thumb {
+                    background-color: $color;
+                }
+
+                .progress, .progress-stacked {
+                    --bs-progress-bar-bg: #{$color};
+                }
+            }
+            /*Buttons */
+            .btn-#{$name} {
+                --bs-btn-bg: var(--bs-#{$name});
+                --bs-btn-border-color: var(--bs-btn-bg);
+                --bs-btn-hover-bg: #{"hsl(from var(--bs-btn-bg) h s calc(l - 2.5))"};
+                --bs-btn-hover-border-color: #{"hsl(from var(--bs-btn-bg) h s calc(l - 5))"};
+                --bs-btn-active-bg: #{"hsl(from var(--bs-btn-bg) h s calc(l - 5))"};
+                --bs-btn-active-border-color: #{"hsl(from var(--bs-btn-bg) h s calc(l - 7.5))"};
+                --bs-btn-disabled-bg: color-mix(in hsl, var(--bs-btn-bg), #777 10%);
+                --bs-btn-disabled-border-color: color-mix(in hsl, var(--bs-btn-bg), #777 10%);
+            }
+
+            .btn-outline-#{$name} {
+                --bs-btn-color: var(--bs-#{$name});
+                --bs-btn-border-color: var(--bs-btn-color);
+                --bs-btn-hover-bg: var(--bs-btn-color);
+                --bs-btn-hover-border-color: var(--bs-btn-color);
+                --bs-btn-active-bg: var(--bs-btn-color);
+                --bs-btn-active-border-color: var(--bs-btn-color);
+                --bs-btn-disabled-color: var(--bs-btn-color);
+                --bs-btn-disabled-border-color: var(--bs-btn-color);
+            }
+        }
+
+        @each $name, $color in $lightColors {
+            --bs-#{$name}: #{$color};
+        }
+    }
+
+
+    @include color-mode(dark) {
+        &[data-twr-theme="#{$themeName}"], [data-twr-theme="#{$themeName}"] {
+            @each $name, $color in $colors {
+                $themeLinkColorDark: lighten($color, 10);
+                $themeLinkHoverColorDark: lighten($color, 15);
+                $themeLinkColorDarkRgb: toRgb($themeLinkHoverColorDark);
+
+                @if $name == "primary" {
+                    --bs-link-color: #{$themeLinkColorDark};
+                    --bs-link-color-rgb: #{$themeLinkColorDarkRgb};
+                    --bs-link-hover-color-rgb: #{toRgb($themeLinkHoverColorDark)};
+                }
+            }
+
+            @each $name, $color in $darkColors {
+                --bs-#{$name}: #{$color};
+            }
+        }
+    }
+}

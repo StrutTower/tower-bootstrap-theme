@@ -3,51 +3,30 @@
 ///<reference path="../node_modules/bootstrap/scss/variables.scss" />
 
 
+.alert a {
+    color: var(--bs-link-color);
+
+    &:hover {
+        color: var(--bs-link-hover-color);
+    }
+}
+
 .alert-success, .text-success {
-    --bs-link-color-rgb: #{toRgb($success)};
-    --bs-link-hover-color-rgb: #{toRgb(darken($success,10))};
+    --bs-link-color: var(--bs-success-text-emphasis);
+    --bs-link-hover-color: hsl(from var(--bs-success-text-emphasis) h s calc(l - 5));
 }
 
 .alert-danger, .text-danger {
-    --bs-link-color-rgb: #{toRgb($danger)};
-    --bs-link-hover-color-rgb: #{toRgb(darken($danger,10))};
+    --bs-link-color: var(--bs-danger-text-emphasis);
+    --bs-link-hover-color: hsl(from var(--bs-danger-text-emphasis) h s calc(l - 5));
 }
 
 .alert-warning, .text-warning {
-    --bs-link-color-rgb: #{toRgb(darken($warning, 20))};
-    --bs-link-hover-color-rgb: #{toRgb(darken($warning,30))};
+    --bs-link-color: var(--bs-warning-text-emphasis);
+    --bs-link-hover-color: hsl(from var(--bs-warning-text-emphasis) h s calc(l - 5));
 }
 
 .alert-info, .text-info {
-    --bs-link-color-rgb: #{toRgb($info)};
-    --bs-link-hover-color-rgb: #{toRgb(darken($info, 10))};
-}
-
-@include color-mode(light) {
-    .alert-dark, .text-dark {
-        --bs-link-color-rgb: #{toRgb(darken($link-color, 10))};
-        --bs-link-hover-color-rgb: #{toRgb(darken($link-color, 20))};
-    }
-}
-
-@include color-mode(dark) {
-    .alert-success, .text-success {
-        --bs-link-color-rgb: #{toRgb(lighten($success,10))};
-        --bs-link-hover-color-rgb: #{toRgb(lighten($success,20))};
-    }
-
-    .alert-danger, .text-danger {
-        --bs-link-color-rgb: #{toRgb(lighten($danger,10))};
-        --bs-link-hover-color-rgb: #{toRgb(lighten($danger,20))};
-    }
-
-    .alert-warning, .text-warning {
-        --bs-link-color-rgb: #{toRgb($warning)};
-        --bs-link-hover-color-rgb: #{toRgb(lighten($warning,20))};
-    }
-
-    .alert-info, .text-info {
-        --bs-link-color-rgb: #{toRgb(lighten($info,10))};
-        --bs-link-hover-color-rgb: #{toRgb(lighten($info, 20))};
-    }
+    --bs-link-color: var(--bs-info-text-emphasis);
+    --bs-link-hover-color: hsl(from var(--bs-info-text-emphasis) h s calc(l - 5));
 }

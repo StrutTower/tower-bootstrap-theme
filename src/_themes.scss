@@ -1,0 +1,63 @@
+///<reference path="themes/_themeMixins.scss" />
+
+/* Cyan */
+$cyan-colors: (
+    "primary": #047878,
+    "info": #006fe7
+);
+$cyan-light-colors: (
+    "primary-bg-subtle": #cce4e4,
+    "primary-text-emphasis": #003030,
+    "primary-border-subtle":#99c9c9,
+    "info-bg-subtle": #cce1f7,
+    "info-text-emphasis": #002a56,
+    "info-border-subtle": #99c3ef,
+);
+$cyan-dark-colors: (
+    "primary-bg-subtle": #001818,
+    "primary-text-emphasis": #67aeae,
+    "primary-border-subtle":#014848,
+    "info-bg-subtle": #00152b,
+    "info-text-emphasis": #66a4e8,
+    "info-border-subtle": #003e82,
+);
+@include twr-theme-override("cyan", $cyan-colors, $cyan-light-colors, $cyan-dark-colors);
+
+/* Purple */
+$purple-colors: (
+    "primary": lighten(#7540bf, 5)
+);
+$purple-light-colors: (
+    "primary-bg-subtle": #e1d3f5,
+    "primary-text-emphasis": #3a2b50,
+    "primary-border-subtle":#b297d8,
+);
+$purple-dark-colors: (
+    "primary-bg-subtle": #180018,
+    "primary-text-emphasis": desaturate(lighten(#180018, 40), 20),
+    "primary-border-subtle": lighten(#180018, 15)
+);
+@include twr-theme-override("purple", $purple-colors, $purple-light-colors, $purple-dark-colors);
+
+/* Green */
+$green-colors: (
+    "primary": #198754,
+    "success": #006fe7
+);
+$green-light-colors: (
+    "primary-bg-subtle": #d1e7dd,
+    "primary-text-emphasis": #345c4a,
+    "primary-border-subtle":#a3cfbb,
+    "success-bg-subtle": #cce1f7,
+    "success-text-emphasis": #002a56,
+    "success-border-subtle": #99c3ef,
+);
+$green-dark-colors: (
+    "primary-bg-subtle": #051b11,
+    "primary-text-emphasis": #75b798,
+    "primary-border-subtle": #0f5132,
+    "success-bg-subtle": #00152b,
+    "success-text-emphasis": #66a4e8,
+    "success-border-subtle": #003e82,
+);
+@include twr-theme-override("green", $green-colors, $green-light-colors, $green-dark-colors);
