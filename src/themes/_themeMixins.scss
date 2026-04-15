@@ -13,7 +13,7 @@
                 --bs-link-hover-color-rgb: #{toRgb(darken($color, 5))};
 
 
-
+                // Setting primary color of elements that do not use CSS variables or the variables are not global global
                 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
                     --bs-nav-pills-link-active-bg: #{$color};
                 }

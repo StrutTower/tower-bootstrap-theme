@@ -46,11 +46,11 @@
     }
 });
 
-document.querySelectorAll('.slim-select-test').forEach(function(element) {
+document.querySelectorAll('.slim-select-test').forEach(function (element) {
     new SlimSelect({
         select: element
     });
-})
+});
 
 function toast(text, type) {
     var template = $('#toast-template').find('.toast').clone();

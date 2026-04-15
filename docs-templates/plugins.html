@@ -20,7 +20,14 @@
         <hr />
 
         <div class="mb-3">
-            <h3>Slim Select <span class="h5"><a href="https://slimselectjs.com/" target="_blank" rel="noopener noreferrer" class="small">https://slimselectjs.com/</a></span></h3>
+            <h3>
+                Slim Select
+                <span class="h5">
+                    <a href="https://slimselectjs.com/" target="_blank" rel="noopener noreferrer" class="small">
+                        https://slimselectjs.com/
+                    </a>
+                </span>
+            </h3>
 
             <div class="mb-3">
                 <label>Single Select List</label>
@@ -43,11 +50,45 @@
                     <option value="5">Option 5</option>
                 </select>
             </div>
+
+
+            <div class="mb-3">
+                <label>Bootstrap Input Group</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" />
+                    <select class="slim-select-test">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                    <button type="button" class="btn btn-primary">Test</button>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label>Bootstrap Input</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="col">
+                    <label>Slim Select</label>
+                    <select class="slim-select-test">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                </div>
+            </div>
         </div>
 
         <br />
         <br />
         <br />
+
     </main>
 
     @@include('./partials/_footer.html')

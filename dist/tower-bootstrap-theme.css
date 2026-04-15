@@ -5,6 +5,7 @@
 /* floating label */
 /* tables */
 /* carousel */
+/* Tooltips */
 /*!
  * Bootstrap  v5.3.8 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -398,8 +399,8 @@ a > code {
 kbd {
   padding: 0.1875rem 0.375rem;
   font-size: 0.875em;
-  color: var(--bs-body-bg);
-  background-color: var(--bs-body-color);
+  color: white;
+  background-color: black;
   border-radius: 0.25rem;
 }
 kbd kbd {
@@ -5719,8 +5720,8 @@ textarea.form-control-lg {
   --bs-tooltip-padding-y: 0.25rem;
   --bs-tooltip-margin: ;
   --bs-tooltip-font-size: 0.875rem;
-  --bs-tooltip-color: var(--bs-body-bg);
-  --bs-tooltip-bg: var(--bs-emphasis-color);
+  --bs-tooltip-color: white;
+  --bs-tooltip-bg: black;
   --bs-tooltip-border-radius: var(--bs-border-radius);
   --bs-tooltip-opacity: 0.9;
   --bs-tooltip-arrow-width: 0.8rem;
@@ -11908,57 +11909,8 @@ textarea.form-control-lg {
   --twr-outline-color: white;
 }
 
-[data-bs-theme=dark] {
-  /* .form-control, .form-select {
-      background-color: $input-bg-dark;
-      border-color: $input-border-color-dark;
-
-      &:disabled, &[readonly] {
-          color: darken($body-color-dark, 40);
-          background-color: darken($input-bg-dark, 4);
-
-          &::placeholder {
-              color: darken($body-color-dark, 40);
-          }
-      }
-
-      &:focus[readonly] {
-          border-color: lighten($input-border-color-dark, 5);
-      }
-
-      &:focus {
-          border-color: lighten($primary, 5);
-      }
-
-      &.is-valid {
-          border-color: $success;
-      }
-
-      &.is-invalid, &.input-validation-error {
-          border-color: $danger;
-      }
-  }
-
-  .input-group > .form-control, .input-group > .form-select {
-      border-right-color: $input-border-color-dark;
-      border-left-color: $input-border-color-dark;
-  }
-
-  .input-group-text {
-      border-color: $input-border-color-dark;
-  }*/
-  /*
-      .form-control::file-selector-button {
-          border-color: $input-border-color-dark;
-      }
-  */
-}
 [data-bs-theme=dark] strong, [data-bs-theme=dark] .font-weight-bold {
   color: white;
-}
-[data-bs-theme=dark] kbd {
-  color: #F1F1F1;
-  background-color: black;
 }
 [data-bs-theme=dark] .form-check-input:not(:checked, :focus) {
   border-color: hsl(from var(--bs-border-color) h s calc(l + 10));
@@ -11966,19 +11918,12 @@ textarea.form-control-lg {
 [data-bs-theme=dark] .form-check-input:not(:checked, :focus):focus {
   border-color: #0068d8;
 }
-[data-bs-theme=dark] .form-check-input {
-  /*border-color: lighten($input-border-color-dark, 1);*/
-  /*background-color: $input-bg;*/
-}
-[data-bs-theme=dark] .form-check-input:checked {
-  /*background-color: $primary;*/
-}
 [data-bs-theme=dark] .blockquote-footer {
   color: var(--bs-secondary-color);
 }
 
 :root {
-  --bs-link-hover-color: hsl(from var(--bs-link-color) h s calc(l - 5));
+  --bs-link-hover-color: hsl(from var(--bs-link-color) h s calc(l + 5));
   --bs-nav-link-hover-color: var(--bs-link-hover-color);
 }
 
@@ -11986,15 +11931,43 @@ a, .btn-link {
   text-decoration-color: hsl(from var(--bs-link-color) h s l / 50%);
 }
 a:hover, .btn-link:hover {
-  text-decoration-color: hsl(from var(--bs-link-hover-color) h s l / 100%);
+  text-decoration-color: var(--bs-link-hover-color);
 }
 
-.text-warning {
+.text-warning, .link-warning {
   color: #876500 !important;
 }
 
-.text-success {
+.text-success, .link-success {
   color: #157147 !important;
+}
+
+/* Alert Links */
+.alert a {
+  color: var(--bs-link-color);
+}
+.alert a:hover {
+  color: var(--bs-link-hover-color);
+}
+
+.alert-success, .text-success {
+  --bs-link-color: var(--bs-success-text-emphasis);
+  --bs-link-hover-color: hsl(from var(--bs-success-text-emphasis) h s calc(l + 5));
+}
+
+.alert-danger, .text-danger {
+  --bs-link-color: var(--bs-danger-text-emphasis);
+  --bs-link-hover-color: hsl(from var(--bs-danger-text-emphasis) h s calc(l + 5));
+}
+
+.alert-warning, .text-warning {
+  --bs-link-color: var(--bs-warning-text-emphasis);
+  --bs-link-hover-color: hsl(from var(--bs-warning-text-emphasis) h s calc(l + 5));
+}
+
+.alert-info, .text-info {
+  --bs-link-color: var(--bs-info-text-emphasis);
+  --bs-link-hover-color: hsl(from var(--bs-info-text-emphasis) h s calc(l + 5));
 }
 
 [data-bs-theme=dark] .text-primary {
@@ -12249,33 +12222,6 @@ fieldset legend {
   margin-bottom: 0;
 }
 
-.alert a {
-  color: var(--bs-link-color);
-}
-.alert a:hover {
-  color: var(--bs-link-hover-color);
-}
-
-.alert-success, .text-success {
-  --bs-link-color: var(--bs-success-text-emphasis);
-  --bs-link-hover-color: hsl(from var(--bs-success-text-emphasis) h s calc(l - 5));
-}
-
-.alert-danger, .text-danger {
-  --bs-link-color: var(--bs-danger-text-emphasis);
-  --bs-link-hover-color: hsl(from var(--bs-danger-text-emphasis) h s calc(l - 5));
-}
-
-.alert-warning, .text-warning {
-  --bs-link-color: var(--bs-warning-text-emphasis);
-  --bs-link-hover-color: hsl(from var(--bs-warning-text-emphasis) h s calc(l - 5));
-}
-
-.alert-info, .text-info {
-  --bs-link-color: var(--bs-info-text-emphasis);
-  --bs-link-hover-color: hsl(from var(--bs-info-text-emphasis) h s calc(l - 5));
-}
-
 .btn-warning {
   --bs-btn-hover-bg: hsl(from var(--bs-btn-bg) h s calc(l - 7.5));
   --bs-btn-hover-border-color: hsl(from var(--bs-btn-bg) h s calc(l - 7));
@@ -12322,6 +12268,8 @@ details {
 details summary {
   margin: -0.5em -1em 0;
   padding: 0.5em;
+  border-top-left-radius: var(--bs-border-radius);
+  border-top-right-radius: var(--bs-border-radius);
 }
 details summary::marker {
   color: var(--bs-primary-text-emphasis);
@@ -12387,22 +12335,18 @@ div.note-editor.note-frame .note-statusbar {
   --ss-border-color: var(--bs-border-color);
   --ss-border-radius: var(--bs-border-radius);
   --ss-highlight-color: var(--bs-primary);
-  --ss-main-height: 25.5px;
+  --ss-main-height: 1.5em;
 }
 
 .ss-main {
   --ss-bg-color: hsl(from var(--bs-body-bg) h s calc(l + 4));
-  /* border-top: 0;
-  border-left: 0;
-  border-right: 0;*/
-  padding-top: 0;
-  padding-bottom: 0;
-  /* border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;*/
+  padding-top: 0.125em;
+  padding-bottom: 0.125em;
 }
 .ss-main:focus, .ss-main[aria-expanded=true] {
   box-shadow: none;
   border-color: var(--bs-primary);
+  outline: 1px solid var(--bs-primary);
 }
 .ss-main .ss-values .ss-value {
   margin-top: 1px;
@@ -12420,13 +12364,31 @@ div.note-editor.note-frame .note-statusbar {
 .ss-main .ss-values .ss-value .ss-value-delete:hover svg path {
   stroke: rgba(255, 255, 255, 0.9);
 }
+.ss-main .ss-values .ss-placeholder {
+  line-height: 0.875em;
+}
+
+.ss-content.ss-dir-above {
+  border-top-color: var(--bs-primary);
+  border-left-color: var(--bs-primary);
+  border-right-color: var(--bs-primary);
+}
+.ss-content.ss-dir-below {
+  border-bottom-color: var(--bs-primary);
+  border-left-color: var(--bs-primary);
+  border-right-color: var(--bs-primary);
+}
 
 .ss-content .ss-list .ss-option:hover:not(.ss-disabled), .ss-content .ss-list .ss-option.ss-highlighted, .ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
   color: white;
 }
 
-.ss-content.ss-dir-below.ss-open {
-  border-top-color: var(--bs-primary);
+/* Bootstrap input group support */
+.input-group > .ss-main {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
 }
 
 /* Cyan */ /* Links */

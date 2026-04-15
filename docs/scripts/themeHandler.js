@@ -23,7 +23,7 @@ function updateThemeSelector(theme) {
     document.querySelectorAll('[data-bs-theme-value]').forEach(function (selector) {
         if (selector.getAttribute('data-bs-theme-value') === theme) {
             selector.classList.add('active');
-            document.getElementById('current-theme').className = selector.firstElementChild.className
+            document.getElementById('current-theme').innerHTML = selector.firstElementChild.outerHTML;
         } else {
             selector.classList.remove('active');
         }
