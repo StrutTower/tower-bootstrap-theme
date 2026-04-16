@@ -12181,6 +12181,7 @@ label.form-check-label {
   select, select::picker(select),
   select.form-select, select.form-select::picker(select) {
     appearance: base-select;
+    min-height: 1.875em;
   }
   select::picker-icon {
     display: none;
