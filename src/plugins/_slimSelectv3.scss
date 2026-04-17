@@ -19,11 +19,12 @@
     --ss-bg-color: #{$input-bg};
     padding-top: 0.125em;
     padding-bottom: 0.125em;
+    box-shadow: 0 0 0 1px transparent;
 
     &:focus, &[aria-expanded="true"] {
         box-shadow: none;
-        border-color: var(--bs-primary);
-        outline: 1px solid var(--bs-primary);
+        border-color: var(--bs-link-color);
+        box-shadow: 0 0 0 1px var(--bs-link-color);
     }
 
     .ss-values .ss-value {
@@ -46,25 +47,28 @@
             }
         }
     }
-
     // Fixing height of multiple placeholder
     .ss-values .ss-placeholder {
-        line-height:0.875em;
+        line-height: 0.875em;
     }
 }
 
 // Border colors for dropdown
 .ss-content {
     &.ss-dir-above {
-        border-top-color: var(--bs-primary);
-        border-left-color: var(--bs-primary);
-        border-right-color: var(--bs-primary);
+        border-top-color: var(--bs-link-color);
+        border-bottom-color: transparent;
+        border-left-color: var(--bs-link-color);
+        border-right-color: var(--bs-link-color);
+        box-shadow: 0 0 0 1px var(--bs-link-color);
     }
 
     &.ss-dir-below {
-        border-bottom-color: var(--bs-primary);
-        border-left-color: var(--bs-primary);
-        border-right-color: var(--bs-primary);
+        border-top-color: transparent;
+        border-bottom-color: var(--bs-link-color);
+        border-left-color: var(--bs-link-color);
+        border-right-color: var(--bs-link-color);
+        box-shadow: 0 0 0 1px var(--bs-link-color);
     }
 }
 

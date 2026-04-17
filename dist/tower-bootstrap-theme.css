@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* nav */
+/*/* nav */
 /* inputs */
 /* buttons */
 /* floating label */
@@ -173,10 +173,10 @@
   --bs-light-border-subtle: #424249;
   --bs-dark-border-subtle: #2A2A2E;
   --bs-heading-color: inherit;
-  --bs-link-color: #66a4e8;
-  --bs-link-hover-color: #85b6ed;
-  --bs-link-color-rgb: 102, 164, 232;
-  --bs-link-hover-color-rgb: 133, 182, 237;
+  --bs-link-color: #4d95e4;
+  --bs-link-hover-color: #71aae9;
+  --bs-link-color-rgb: 77, 149, 228;
+  --bs-link-hover-color-rgb: 113, 170, 233;
   --bs-code-color: #dd7ead;
   --bs-highlight-color: #F1F1F1;
   --bs-highlight-bg: #664d03;
@@ -2404,6 +2404,10 @@ textarea.form-control-lg {
 .form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
   cursor: default;
   opacity: 0.5;
+}
+
+.form-check-label {
+  cursor: pointer;
 }
 
 .form-switch {
@@ -11942,6 +11946,10 @@ a:hover, .btn-link:hover {
   color: #157147 !important;
 }
 
+.nav-link:focus-visible {
+  outline: 2px solid var(--twr-outline-color);
+}
+
 /* Alert Links */
 .alert a {
   color: var(--bs-link-color);
@@ -12114,17 +12122,20 @@ a:hover, .btn-link:hover {
 }
 
 /* Setting outline for focused inputs */
+.form-control, .form-select {
+  box-shadow: 0 0 0 1px transparent;
+}
 .form-control:focus, .form-control:focus-within, .form-select:focus, .form-select:focus-within {
-  outline: 1px solid var(--bs-link-color);
   border-color: var(--bs-link-color);
+  box-shadow: 0 0 0 1px var(--bs-link-color);
 }
 .form-control.is-valid:focus, .form-select.is-valid:focus {
   border-color: var(--bs-form-valid-border-color);
-  outline-color: var(--bs-form-valid-border-color);
+  box-shadow: 0 0 0 1px var(--bs-form-valid-border-color);
 }
 .form-control.is-invalid:focus, .form-select.is-invalid:focus {
   border-color: var(--bs-form-invalid-border-color);
-  outline-color: var(--bs-form-invalid-border-color);
+  box-shadow: 0 0 0 1px var(--bs-form-invalid-border-color);
 }
 
 /* ASP.NET validation error messages */
@@ -12135,10 +12146,11 @@ a:hover, .btn-link:hover {
 /* jQuery validation input validation error */
 .form-control.input-validation-error, .form-select.input-validation-error {
   border-color: var(--bs-form-invalid-color);
+  box-shadow: 0 0 0 1px transparent;
 }
 .form-control.input-validation-error:focus, .form-select.input-validation-error:focus {
   border-color: var(--bs-form-invalid-color);
-  outline: 1px solid var(--bs-form-invalid-color);
+  box-shadow: 0 0 0 1px var(--bs-form-invalid-border-color);
 }
 
 /* custom label styles */
@@ -12169,8 +12181,14 @@ label.form-check-label {
   outline: 2px solid var(--twr-outline-color);
 }
 
-/* Pointer cursor for checkbox labels */
-.form-check-label, .form-check-input, label.form-check, label.form-check-inline {
+.col-form-label {
+  font-size: 0.9em;
+  padding-top: calc(0.2rem + var(--bs-border-width));
+  padding-bottom: 0;
+}
+
+/* Pointer cursor for checkboxes and radio buttons */
+.form-check-input {
   cursor: pointer;
   display: inline-block;
   margin-bottom: 0;
@@ -12343,11 +12361,12 @@ div.note-editor.note-frame .note-statusbar {
   --ss-bg-color: hsl(from var(--bs-body-bg) h s calc(l + 4));
   padding-top: 0.125em;
   padding-bottom: 0.125em;
+  box-shadow: 0 0 0 1px transparent;
 }
 .ss-main:focus, .ss-main[aria-expanded=true] {
   box-shadow: none;
-  border-color: var(--bs-primary);
-  outline: 1px solid var(--bs-primary);
+  border-color: var(--bs-link-color);
+  box-shadow: 0 0 0 1px var(--bs-link-color);
 }
 .ss-main .ss-values .ss-value {
   margin-top: 1px;
@@ -12370,14 +12389,18 @@ div.note-editor.note-frame .note-statusbar {
 }
 
 .ss-content.ss-dir-above {
-  border-top-color: var(--bs-primary);
-  border-left-color: var(--bs-primary);
-  border-right-color: var(--bs-primary);
+  border-top-color: var(--bs-link-color);
+  border-bottom-color: transparent;
+  border-left-color: var(--bs-link-color);
+  border-right-color: var(--bs-link-color);
+  box-shadow: 0 0 0 1px var(--bs-link-color);
 }
 .ss-content.ss-dir-below {
-  border-bottom-color: var(--bs-primary);
-  border-left-color: var(--bs-primary);
-  border-right-color: var(--bs-primary);
+  border-top-color: transparent;
+  border-bottom-color: var(--bs-link-color);
+  border-left-color: var(--bs-link-color);
+  border-right-color: var(--bs-link-color);
+  box-shadow: 0 0 0 1px var(--bs-link-color);
 }
 
 .ss-content .ss-list .ss-option:hover:not(.ss-disabled), .ss-content .ss-list .ss-option.ss-highlighted, .ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
@@ -12476,7 +12499,7 @@ div.note-editor.note-frame .note-statusbar {
 
 [data-bs-theme=dark][data-twr-theme=cyan], [data-bs-theme=dark] [data-twr-theme=cyan] {
   --bs-link-color: #06a9a9;
-  --bs-link-color-rgb: 6, 194, 194;
+  --bs-link-color-rgb: 6, 169, 169;
   --bs-link-hover-color-rgb: 6, 194, 194;
   --bs-primary-bg-subtle: #001818;
   --bs-primary-text-emphasis: #67aeae;
@@ -12545,7 +12568,7 @@ div.note-editor.note-frame .note-statusbar {
 
 [data-bs-theme=dark][data-twr-theme=purple], [data-bs-theme=dark] [data-twr-theme=purple] {
   --bs-link-color: #9e79d2;
-  --bs-link-color-rgb: 172, 140, 217;
+  --bs-link-color-rgb: 158, 121, 210;
   --bs-link-hover-color-rgb: 172, 140, 217;
   --bs-primary-bg-subtle: #180018;
   --bs-primary-text-emphasis: #cd17cd;
@@ -12637,7 +12660,7 @@ div.note-editor.note-frame .note-statusbar {
 
 [data-bs-theme=dark][data-twr-theme=green], [data-bs-theme=dark] [data-twr-theme=green] {
   --bs-link-color: #21b26f;
-  --bs-link-color-rgb: 37, 200, 124;
+  --bs-link-color-rgb: 33, 178, 111;
   --bs-link-hover-color-rgb: 37, 200, 124;
   --bs-primary-bg-subtle: #051b11;
   --bs-primary-text-emphasis: #75b798;

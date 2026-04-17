@@ -22,6 +22,10 @@ a, .btn-link {
     color: darken($success, 5) !important;
 }
 
+.nav-link:focus-visible {
+    outline: 2px solid var(--twr-outline-color);
+}
+
 /* Alert Links */
 .alert a {
     color: var(--bs-link-color);

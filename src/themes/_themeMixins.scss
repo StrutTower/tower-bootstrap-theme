@@ -11,8 +11,6 @@
                 --bs-link-color: #{$color};
                 --bs-link-color-rgb: #{toRgb($color)};
                 --bs-link-hover-color-rgb: #{toRgb(darken($color, 5))};
-
-
                 // Setting primary color of elements that do not use CSS variables or the variables are not global global
                 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
                     --bs-nav-pills-link-active-bg: #{$color};
@@ -78,8 +76,8 @@
         &[data-twr-theme="#{$themeName}"], [data-twr-theme="#{$themeName}"] {
             @each $name, $color in $colors {
                 $themeLinkColorDark: lighten($color, 10);
+                $themeLinkColorDarkRgb: toRgb($themeLinkColorDark);
                 $themeLinkHoverColorDark: lighten($color, 15);
-                $themeLinkColorDarkRgb: toRgb($themeLinkHoverColorDark);
 
                 @if $name == "primary" {
                     --bs-link-color: #{$themeLinkColorDark};

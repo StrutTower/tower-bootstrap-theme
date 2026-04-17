@@ -4,19 +4,21 @@
 
 /* Setting outline for focused inputs */
 .form-control, .form-select {
+    box-shadow: 0 0 0 1px transparent;
+
     &:focus, &:focus-within {
-        outline: 1px solid var(--bs-link-color); //$input-focus-border-color;
-        border-color: var(--bs-link-color); //$input-focus-border-color;
+        border-color: var(--bs-link-color);
+        box-shadow: 0 0 0 1px var(--bs-link-color);
     }
 
     &.is-valid:focus {
         border-color: var(--bs-form-valid-border-color);
-        outline-color: var(--bs-form-valid-border-color);
+        box-shadow: 0 0 0 1px var(--bs-form-valid-border-color);
     }
 
     &.is-invalid:focus {
         border-color: var(--bs-form-invalid-border-color);
-        outline-color: var(--bs-form-invalid-border-color);
+        box-shadow: 0 0 0 1px var(--bs-form-invalid-border-color);
     }
 }
 
@@ -29,10 +31,11 @@
 /* jQuery validation input validation error */
 .form-control.input-validation-error, .form-select.input-validation-error {
     border-color: var(--bs-form-invalid-color);
+    box-shadow: 0 0 0 1px transparent;
 
     &:focus {
         border-color: var(--bs-form-invalid-color);
-        outline: 1px solid var(--bs-form-invalid-color);
+        box-shadow: 0 0 0 1px var(--bs-form-invalid-border-color);
     }
 }
 
@@ -69,8 +72,14 @@ label.form-check-label {
 }
 
 
-/* Pointer cursor for checkbox labels */
-.form-check-label, .form-check-input, label.form-check, label.form-check-inline {
+.col-form-label {
+    font-size: 0.9em;
+    padding-top: calc(.2rem + var(--bs-border-width));
+    padding-bottom:0;
+}
+
+/* Pointer cursor for checkboxes and radio buttons */
+.form-check-input {
     cursor: pointer;
     display: inline-block;
     margin-bottom: 0;

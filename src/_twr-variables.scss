@@ -30,12 +30,13 @@ $code-color: #c72877 !default;
 $link-color: $primary !default;
 $link-color-rgb: toRgb($primary) !default;
 
+$link-color-dark: mix(white, $primary, 30%) !default;
 
 $body-secondary-bg-dark: lighten($body-bg-dark, 10) !default;
 
 
 
-/* nav */
+/*/* nav */
 $nav-link-padding-y: .2rem !default;
 
 $navbar-toggler-padding-y: 0 !default;
@@ -78,6 +79,8 @@ $focus-ring-width: 0 !default;
 
 
 $form-select-indicator-padding: $input-btn-padding-x * 4 !default;
+
+$form-check-label-cursor: pointer !default;
 
 
 /* buttons */
