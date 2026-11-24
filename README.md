@@ -1,3 +1,4 @@
 # tower-bootstrap-theme
 
-[Live Demo](https://struttower.github.io/tower-bootstrap-theme/docs/index.html)
+This project has been moved to
+https://codeberg.org/StrutTower/tower-bootstrap-theme
